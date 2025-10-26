@@ -19,37 +19,39 @@ export default function MarketPricesPage() {
 
   return (
     <div className="container mx-auto py-10">
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
         <h1 className="text-4xl font-bold font-headline">{pageContent.title}</h1>
         <p className="mt-2 text-lg text-muted-foreground">
           {pageContent.subtitle}
         </p>
       </div>
 
-      <Card>
-        <CardContent className="p-0">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>{pageContent.tableHeaders.crop}</TableHead>
-                <TableHead>{pageContent.tableHeaders.market}</TableHead>
-                <TableHead>{pageContent.tableHeaders.price}</TableHead>
-                <TableHead className="text-right">{pageContent.tableHeaders.lastUpdated}</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {marketData.map((item) => (
-                <TableRow key={item.crop}>
-                  <TableCell className="font-medium">{item.crop}</TableCell>
-                  <TableCell>{item.market}</TableCell>
-                  <TableCell>{item.price}</TableCell>
-                  <TableCell className="text-right">{item.date}</TableCell>
+      <div className="animate-in fade-in slide-in-from-bottom-12 duration-1000">
+        <Card>
+          <CardContent className="p-0">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>{pageContent.tableHeaders.crop}</TableHead>
+                  <TableHead>{pageContent.tableHeaders.market}</TableHead>
+                  <TableHead>{pageContent.tableHeaders.price}</TableHead>
+                  <TableHead className="text-right">{pageContent.tableHeaders.lastUpdated}</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+              </TableHeader>
+              <TableBody>
+                {marketData.map((item) => (
+                  <TableRow key={item.crop}>
+                    <TableCell className="font-medium">{item.crop}</TableCell>
+                    <TableCell>{item.market}</TableCell>
+                    <TableCell>{item.price}</TableCell>
+                    <TableCell className="text-right">{item.date}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 }

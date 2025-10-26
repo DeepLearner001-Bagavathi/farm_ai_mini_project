@@ -17,7 +17,7 @@ export default function ContactPage() {
 
   return (
     <div className="container mx-auto py-10">
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
         <h1 className="text-4xl font-bold font-headline">{pageContent.title}</h1>
         <p className="mt-2 text-lg text-muted-foreground">
           {pageContent.subtitle}
@@ -25,19 +25,21 @@ export default function ContactPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {pageContent.contactOptions.map((option) => (
-            <Card key={option.id} className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="items-center">
-                    <div className="p-4 bg-secondary rounded-full">
-                        {icons[option.id]}
-                    </div>
-                    <CardTitle className="mt-4 font-headline">{option.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-muted-foreground mb-4 min-h-[40px]">{option.content}</p>
-                    <p className="font-bold text-lg text-primary">{option.contact}</p>
-                </CardContent>
-            </Card>
+        {pageContent.contactOptions.map((option, i) => (
+            <div key={option.id} className="animate-in fade-in slide-in-from-bottom-12 duration-700" style={{animationDelay: `${i * 150}ms`}}>
+                <Card className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+                    <CardHeader className="items-center">
+                        <div className="p-4 bg-secondary rounded-full">
+                            {icons[option.id]}
+                        </div>
+                        <CardTitle className="mt-4 font-headline">{option.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-muted-foreground mb-4 min-h-[40px]">{option.content}</p>
+                        <p className="font-bold text-lg text-primary">{option.contact}</p>
+                    </CardContent>
+                </Card>
+            </div>
         ))}
       </div>
     </div>

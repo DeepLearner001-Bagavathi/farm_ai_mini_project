@@ -15,13 +15,13 @@ export default function SchemesPage() {
 
   return (
     <div className="container mx-auto py-10">
-      <div className="text-center mb-10">
+      <div className="text-center mb-10 animate-in fade-in slide-in-from-bottom-10 duration-700">
         <h1 className="text-4xl font-bold font-headline">{pageContent.title}</h1>
         <p className="mt-2 text-lg text-muted-foreground">
           {pageContent.subtitle}
         </p>
       </div>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-12 duration-1000">
         <Accordion type="single" collapsible className="w-full">
           {pageContent.schemesData.map((scheme) => (
             <AccordionItem key={scheme.title} value={scheme.title}>
