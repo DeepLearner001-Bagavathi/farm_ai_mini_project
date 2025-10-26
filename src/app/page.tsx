@@ -33,7 +33,7 @@ export default function Home() {
   const pageContent = content[language].homePage;
   const features = pageContent.features;
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false })
   );
 
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-farm-1');
@@ -77,8 +77,6 @@ export default function Home() {
           <Carousel
               plugins={[plugin.current]}
               className="w-full"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
               opts={{
                 align: "start",
                 loop: true,
