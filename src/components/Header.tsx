@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Leaf, Menu, Globe, MessageCircle } from "lucide-react";
+import { Leaf, Menu, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
@@ -15,7 +15,6 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
-import { useChatbot } from "./ai/Chatbot";
 
 export function Header() {
   const pathname = usePathname();
@@ -23,7 +22,6 @@ export function Header() {
   const { language, setLanguage } = useLanguage();
   const headerContent = content[language].header;
   const navLinks = headerContent.navLinks;
-  const { setOpen: setChatbotOpen } = useChatbot();
 
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
@@ -47,11 +45,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
-          <Button variant="ghost" size="icon" onClick={() => setChatbotOpen(true)}>
-            <MessageCircle className="h-5 w-5" />
-            <span className="sr-only">{content[language].chatbot.open}</span>
-          </Button>
-
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
