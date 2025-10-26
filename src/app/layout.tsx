@@ -3,7 +3,6 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
-import { ChartBot } from '@/components/ChartBot';
 
 export const metadata: Metadata = {
   title: 'TN Agri Mitra',
@@ -27,7 +26,6 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
-        <ChartBot />
       </body>
     </html>
   );
