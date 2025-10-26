@@ -160,7 +160,7 @@ export default function Home() {
                   <div className="animate-in fade-in slide-in-from-right-20 duration-1000">
                       <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{pageContent.schemeHighlight.title}</h2>
                       <p className="text-muted-foreground mb-6">{pageContent.schemeHighlight.description}</p>
-                      <Button asChild>
+                      <Button asChild className="transition-transform hover:scale-105">
                           <Link href="/schemes">{pageContent.schemeHighlight.cta}</Link>
                       </Button>
                   </div>
