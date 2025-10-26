@@ -50,7 +50,7 @@ export default function Home() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover animate-in fade-in zoom-in-105 duration-[6000ms]"
+            className="object-cover animate-in fade-in zoom-in-105 duration-1000"
             priority
             data-ai-hint={heroImage.imageHint}
           />
