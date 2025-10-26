@@ -7,7 +7,7 @@ import { Chatbot, ChatbotProvider } from '@/components/ai/Chatbot';
 import { LanguageProvider } from '@/context/language-context';
 
 export const metadata: Metadata = {
-  title: 'TN Agri Mitra',
+  title: 'TN Ulavan',
   description: 'Your AI farming assistant for Tamil Nadu agriculture.',
 };
 

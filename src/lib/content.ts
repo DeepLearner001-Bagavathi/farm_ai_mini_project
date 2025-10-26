@@ -2,7 +2,7 @@
 export const content = {
   en: {
     header: {
-      title: "TN Agri Mitra",
+      title: "TN Ulavan",
       navLinks: [
         { href: "/", label: "Home" },
         { href: "/weather", label: "Weather" },
@@ -15,11 +15,11 @@ export const content = {
       }
     },
     footer: {
-      copyright: "TN Agri Mitra. All rights reserved.",
+      copyright: "TN Ulavan. All rights reserved.",
     },
     homePage: {
       hero: {
-        title: "Welcome to TN Agri Mitra",
+        title: "Welcome to TN Ulavan",
         subtitle: "Your AI-powered companion for smart and sustainable farming in Tamil Nadu.",
         cta: "Check Weather",
       },
@@ -57,8 +57,8 @@ export const content = {
         }
       ],
       aboutSection: {
-        title: "About TN Agri Mitra",
-        p1: "TN Agri Mitra is a digital platform designed to empower farmers in Tamil Nadu with the latest technology and information. Our goal is to make farming more profitable, sustainable, and efficient.",
+        title: "About TN Ulavan",
+        p1: "TN Ulavan is a digital platform designed to empower farmers in Tamil Nadu with the latest technology and information. Our goal is to make farming more profitable, sustainable, and efficient.",
         p2: "From real-time weather updates and market prices to detailed information about government schemes, we provide a comprehensive suite of tools to support you at every stage of the farming lifecycle.",
       },
       schemeHighlight: {
@@ -162,7 +162,7 @@ export const content = {
   },
   ta: {
     header: {
-      title: "TN Agri Mitra",
+      title: "TN உழவன்",
       navLinks: [
         { href: "/", label: "முகப்பு" },
         { href: "/weather", label: "வானிலை" },
@@ -175,11 +175,11 @@ export const content = {
       }
     },
     footer: {
-      copyright: "TN Agri Mitra. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+      copyright: "TN உழவன். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
     },
     homePage: {
       hero: {
-        title: "TN Agri Mitra-க்கு வரவேற்கிறோம்",
+        title: "TN உழவன்-க்கு வரவேற்கிறோம்",
         subtitle: "தமிழ்நாட்டில் έξυπனான மற்றும் நிலையான விவசாயத்திற்கான உங்கள் AI-இயங்கும் துணை.",
         cta: "வானிலை சரிபார்க்கவும்",
       },
@@ -217,8 +217,8 @@ export const content = {
         }
       ],
       aboutSection: {
-        title: "TN Agri Mitra பற்றி",
-        p1: "TN Agri Mitra என்பது தமிழ்நாட்டு விவசாயிகளுக்கு சமீபத்திய தொழில்நுட்பம் மற்றும் தகவல்களுடன் அதிகாரம் அளிக்க வடிவமைக்கப்பட்ட ஒரு டிஜிட்டல் தளமாகும். விவசாயத்தை அதிக லாபகரமானதாகவும், நிலையானதாகவும், திறமையாகவும் மாற்றுவதே எங்கள் குறிக்கோள்.",
+        title: "TN உழவன் பற்றி",
+        p1: "TN உழவன் என்பது தமிழ்நாட்டு விவசாயிகளுக்கு சமீபத்திய தொழில்நுட்பம் மற்றும் தகவல்களுடன் அதிகாரம் அளிக்க வடிவமைக்கப்பட்ட ஒரு டிஜிட்டல் தளமாகும். விவசாயத்தை அதிக லாபகரமானதாகவும், நிலையானதாகவும், திறமையாகவும் மாற்றுவதே எங்கள் குறிக்கோள்.",
         p2: "நிகழ்நேர வானிலை அறிவிப்புகள் மற்றும் சந்தை விலைகள் முதல் அரசாங்க திட்டங்கள் பற்றிய விரிவான தகவல்கள் வரை, விவசாய வாழ்க்கைச் சுழற்சியின் ஒவ்வொரு கட்டத்திலும் உங்களை ஆதரிக்க ஒரு விரிவான கருவிகளை நாங்கள் வழங்குகிறோம்.",
       },
       schemeHighlight: {
