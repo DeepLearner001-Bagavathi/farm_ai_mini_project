@@ -3,8 +3,8 @@
     {
       "id": "hero-farm-1",
       "description": "A lush green farm landscape in Tamil Nadu under a clear sky.",
-      "imageUrl": "/home.jpg",
-      "imageHint": "farm landscape"
+      "imageUrl": "https://images.unsplash.com/photo-1715694293123-f7a074c72199?w=600",
+      "imageHint": "sunset mountains"
     },
     {
       "id": "about-us-1",
