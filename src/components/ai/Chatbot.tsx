@@ -13,6 +13,8 @@ import { useState, useRef, useEffect, createContext, useContext, useMemo } from 
 import { chat } from "@/ai/flows/chat-flow";
 import { ScrollArea } from "../ui/scroll-area";
 import type { ChatInput } from "@/ai/chat-schema";
+import { useLanguage } from "@/context/language-context";
+import { content } from "@/lib/content";
 
 type Message = {
   role: "user" | "model";
@@ -51,6 +53,8 @@ export function Chatbot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const { language } = useLanguage();
+  const chatbotContent = content[language].chatbot;
 
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -74,6 +78,7 @@ export function Chatbot() {
       const chatInput: ChatInput = {
         history: messages,
         message: input,
+        language: language
       };
       const response = await chat(chatInput);
       const botMessage: Message = { role: "model", content: response };
@@ -82,7 +87,7 @@ export function Chatbot() {
       console.error("Error getting response from AI:", error);
       const errorMessage: Message = {
         role: "model",
-        content: "மன்னிக்கவும், ஒரு பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.",
+        content: chatbotContent.error,
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
@@ -95,7 +100,7 @@ export function Chatbot() {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="fixed bottom-4 right-4 top-auto left-auto w-[90vw] max-w-md h-[70vh] flex flex-col p-0 translate-x-0 translate-y-0 data-[state=closed]:slide-out-to-bottom-full data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-bottom-full data-[state=open]:slide-in-from-right-full">
           <DialogHeader className="p-4 border-b">
-            <DialogTitle>AI உதவியாளர்</DialogTitle>
+            <DialogTitle>{chatbotContent.title}</DialogTitle>
           </DialogHeader>
           <div className="flex-1 flex flex-col overflow-hidden">
             <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
@@ -145,7 +150,7 @@ export function Chatbot() {
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="தமிழ்நாட்டில் விவசாயம் பற்றி எதையும் கேளுங்கள்..."
+                  placeholder={chatbotContent.placeholder}
                   className="flex-1"
                   disabled={loading}
                 />
@@ -155,7 +160,7 @@ export function Chatbot() {
                   ) : (
                     <Send className="w-4 h-4" />
                   )}
-                  <span className="sr-only">அனுப்பு</span>
+                  <span className="sr-only">{chatbotContent.send}</span>
                 </Button>
               </form>
             </div>
@@ -169,7 +174,7 @@ export function Chatbot() {
         className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg"
       >
         <MessageCircle className="h-6 w-6" />
-        <span className="sr-only">AI அரட்டையைத் திற</span>
+        <span className="sr-only">{chatbotContent.open}</span>
       </Button>
     </>
   );

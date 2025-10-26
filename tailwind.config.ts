@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"Noto Sans Tamil"', 'sans-serif'],
-        headline: ['"Noto Sans Tamil"', 'sans-serif'],
+        body: ['var(--font-family-body)', 'sans-serif'],
+        headline: ['var(--font-family-headline)', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {

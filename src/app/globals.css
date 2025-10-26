@@ -66,4 +66,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  .font-tamil {
+    --font-family-body: "Noto Sans Tamil";
+    --font-family-headline: "Noto Sans Tamil";
+  }
+  .font-english {
+      --font-family-body: "Roboto";
+      --font-family-headline: "Roboto";
+  }
 }
