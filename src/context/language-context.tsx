@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 
 type Language = 'en' | 'ta';
 
@@ -14,7 +13,6 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('ta');
-  const pathname = usePathname();
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -27,12 +25,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       root.classList.add('font-tamil');
     }
   }, [language]);
-  
-  // Reset to Tamil on page navigation
-  useEffect(() => {
-    setLanguage('ta');
-  }, [pathname]);
-
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
