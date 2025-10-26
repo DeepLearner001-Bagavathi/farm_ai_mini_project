@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Leaf, Menu } from "lucide-react";
+import { Leaf, Menu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { useChatbot } from "./ai/Chatbot";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,6 +20,7 @@ const navLinks = [
 export function Header() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const { setOpen } = useChatbot();
 
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
@@ -41,36 +43,42 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end md:hidden">
-          <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="grid gap-4 py-6">
-                <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setSheetOpen(false)}>
-                  <Leaf className="h-6 w-6 text-accent" />
-                  <span className="font-bold text-lg">TN Agri Mitra</span>
-                </Link>
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setSheetOpen(false)}
-                    className={cn(
-                      "flex w-full items-center py-2 text-lg font-semibold",
-                      pathname === link.href ? "text-primary" : "text-foreground/80"
-                    )}
-                  >
-                    {link.label}
+        <div className="flex flex-1 items-center justify-end gap-2">
+           <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
+              <MessageCircle className="h-5 w-5" />
+              <span className="sr-only">Open AI Chat</span>
+            </Button>
+          <div className="md:hidden">
+            <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="grid gap-4 py-6">
+                  <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setSheetOpen(false)}>
+                    <Leaf className="h-6 w-6 text-accent" />
+                    <span className="font-bold text-lg">TN Agri Mitra</span>
                   </Link>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setSheetOpen(false)}
+                      className={cn(
+                        "flex w-full items-center py-2 text-lg font-semibold",
+                        pathname === link.href ? "text-primary" : "text-foreground/80"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
