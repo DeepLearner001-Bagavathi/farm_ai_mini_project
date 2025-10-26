@@ -186,7 +186,7 @@ export default function Home() {
               <Button 
                 variant="secondary" 
                 size="lg" 
-                className="mt-8"
+                className="mt-8 transition-transform hover:scale-105"
                 onClick={() => setChatbotOpen(true)}
               >
                 {pageContent.cta.cta}
