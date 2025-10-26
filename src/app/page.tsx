@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { CloudSun, BarChart, ScrollText } from "lucide-react";
+import { CloudSun, BarChart, ScrollText, Bot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,6 +23,12 @@ const features = [
     title: "Government Schemes",
     description: "Discover and apply for beneficial government schemes and subsidies.",
     href: "/schemes",
+  },
+  {
+    icon: <Bot className="w-8 h-8 text-accent" />,
+    title: "AI Assistant",
+    description: "Get personalized advice on schemes and farming practices.",
+    href: "/assistant",
   },
 ];
 
@@ -59,7 +65,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Features</h2>
             <p className="mt-2 text-lg text-muted-foreground">Everything you need for modern agriculture.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <Card key={feature.title} className="text-center flex flex-col hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="items-center">

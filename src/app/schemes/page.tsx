@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const schemesData = [
+export const schemesData = [
   {
     title: "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
     content: "An income support scheme for all landholding farmer families. Under the scheme, ₹6,000 per year is provided in three equal installments of ₹2,000 each. This central sector scheme is 100% funded by the Government of India.",
