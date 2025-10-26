@@ -48,6 +48,21 @@ export const content = {
           href: "/schemes",
         },
       ],
+      aboutSection: {
+        title: "About TN Agri Mitra",
+        p1: "TN Agri Mitra is a digital platform designed to empower farmers in Tamil Nadu with the latest technology and information. Our goal is to make farming more profitable, sustainable, and efficient.",
+        p2: "From real-time weather updates and market prices to detailed information about government schemes, we provide a comprehensive suite of tools to support you at every stage of the farming lifecycle.",
+      },
+      schemeHighlight: {
+        title: "Scheme in Focus: PM-KISAN",
+        description: "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a central government scheme that provides income support of ₹6,000 per year to all landholding farmer families. This initiative aims to supplement their financial needs for procuring various inputs related to agriculture and allied activities as well as domestic needs.",
+        cta: "Explore All Schemes",
+      },
+      cta: {
+        title: "Have Questions? Ask Our AI Assistant!",
+        description: "Get instant answers to your farming questions. Our AI chatbot is available 24/7 to help you with crop advice, scheme details, pest control, and much more.",
+        cta: "Ask Now",
+      }
     },
     weatherPage: {
         title: "Weather Forecast",
@@ -186,6 +201,21 @@ export const content = {
           href: "/schemes",
         },
       ],
+      aboutSection: {
+        title: "TN Agri Mitra பற்றி",
+        p1: "TN Agri Mitra என்பது தமிழ்நாட்டு விவசாயிகளுக்கு சமீபத்திய தொழில்நுட்பம் மற்றும் தகவல்களுடன் அதிகாரம் அளிக்க வடிவமைக்கப்பட்ட ஒரு டிஜிட்டல் தளமாகும். விவசாயத்தை அதிக லாபகரமானதாகவும், நிலையானதாகவும், திறமையாகவும் மாற்றுவதே எங்கள் குறிக்கோள்.",
+        p2: "நிகழ்நேர வானிலை அறிவிப்புகள் மற்றும் சந்தை விலைகள் முதல் அரசாங்க திட்டங்கள் பற்றிய விரிவான தகவல்கள் வரை, விவசாய வாழ்க்கைச் சுழற்சியின் ஒவ்வொரு கட்டத்திலும் உங்களை ஆதரிக்க ஒரு விரிவான கருவிகளை நாங்கள் வழங்குகிறோம்.",
+      },
+      schemeHighlight: {
+        title: "கவனத்தில் உள்ள திட்டம்: PM-KISAN",
+        description: "பிரதம மந்திரி கிசான் சம்மன் நிதி (PM-KISAN) என்பது அனைத்து நில உரிமையாளர் விவசாயி குடும்பங்களுக்கும் ஆண்டுக்கு ₹6,000 வருமான ஆதரவை வழங்கும் ஒரு மத்திய அரசு திட்டமாகும். இந்த முயற்சி விவசாயம் மற்றும் அதனுடன் தொடர்புடைய நடவடிக்கைகள் மற்றும் வீட்டுத் தேவைகள் தொடர்பான பல்வேறு உள்ளீடுகளை வாங்குவதற்கான அவர்களின் நிதித் தேவைகளை பூர்த்தி செய்வதை நோக்கமாகக் கொண்டுள்ளது.",
+        cta: "அனைத்து திட்டங்களையும் ஆராயுங்கள்",
+      },
+      cta: {
+        title: "கேள்விகள் உள்ளதா? எங்கள் AI உதவியாளரிடம் கேளுங்கள்!",
+        description: "உங்கள் விவசாய கேள்விகளுக்கு உடனடி பதில்களைப் பெறுங்கள். பயிர் ஆலோசனை, திட்ட விவரங்கள், பூச்சி கட்டுப்பாடு மற்றும் பலவற்றில் உங்களுக்கு உதவ எங்கள் AI చాట్బాట్ 24/7 கிடைக்கிறது.",
+        cta: "இப்போது கேளுங்கள்",
+      }
     },
     weatherPage: {
         title: "வானிலை முன்னறிவிப்பு",
