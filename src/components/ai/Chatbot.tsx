@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -11,9 +12,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Send, Loader, User, Bot, X, MessageCircle } from "lucide-react";
 import { useState, useRef, useEffect, createContext, useContext, useMemo } from "react";
-import { chat } from "@/ai/flows/chat-flow";
 import { ScrollArea } from "../ui/scroll-area";
-import type { ChatInput } from "@/ai/chat-schema";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
 
@@ -75,25 +74,12 @@ export function Chatbot() {
     setInput("");
     setLoading(true);
 
-    try {
-      const chatInput: ChatInput = {
-        history: messages,
-        message: input,
-        language: language
-      };
-      const response = await chat(chatInput);
-      const botMessage: Message = { role: "model", content: response };
-      setMessages((prev) => [...prev, botMessage]);
-    } catch (error) {
-      console.error("Error getting response from AI:", error);
-      const errorMessage: Message = {
-        role: "model",
-        content: chatbotContent.error,
-      };
-      setMessages((prev) => [...prev, errorMessage]);
-    } finally {
-      setLoading(false);
-    }
+    // Simulate a delay for the bot's response
+    setTimeout(() => {
+        const botMessage: Message = { role: "model", content: "I am your AI assistant." };
+        setMessages((prev) => [...prev, botMessage]);
+        setLoading(false);
+    }, 500);
   };
 
   return (
