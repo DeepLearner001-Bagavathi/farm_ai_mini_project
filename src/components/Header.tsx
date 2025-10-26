@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Leaf, Menu, MessageCircle } from "lucide-react";
+import { Leaf, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { useChatbot } from "@/components/ai/Chatbot";
 
 const navLinks = [
   { href: "/", label: "முகப்பு" },
@@ -20,7 +19,6 @@ const navLinks = [
 export function Header() {
   const pathname = usePathname();
   const [isSheetOpen, setSheetOpen] = useState(false);
-  const { setOpen } = useChatbot();
 
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
@@ -44,10 +42,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-2">
-           <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
-              <MessageCircle className="h-5 w-5" />
-              <span className="sr-only">AI அரட்டையைத் திற</span>
-            </Button>
           <div className="md:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>

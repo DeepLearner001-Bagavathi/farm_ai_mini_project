@@ -8,7 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Send, Loader, User, Bot } from "lucide-react";
+import { Send, Loader, User, Bot, MessageCircle } from "lucide-react";
 import { useState, useRef, useEffect, createContext, useContext, useMemo } from "react";
 import { chat } from "@/ai/flows/chat-flow";
 import { ScrollArea } from "../ui/scroll-area";
@@ -91,6 +91,7 @@ export function Chatbot() {
   };
 
   return (
+    <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="fixed bottom-4 right-4 top-auto left-auto w-[90vw] max-w-md h-[70vh] flex flex-col p-0 translate-x-0 translate-y-0 data-[state=closed]:slide-out-to-bottom-full data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-bottom-full data-[state=open]:slide-in-from-right-full">
           <DialogHeader className="p-4 border-b">
@@ -161,5 +162,15 @@ export function Chatbot() {
           </div>
         </DialogContent>
       </Dialog>
+      <Button
+        variant="default"
+        size="icon"
+        onClick={() => setOpen(true)}
+        className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg"
+      >
+        <MessageCircle className="h-6 w-6" />
+        <span className="sr-only">AI அரட்டையைத் திற</span>
+      </Button>
+    </>
   );
 }
