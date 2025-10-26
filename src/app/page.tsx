@@ -132,7 +132,7 @@ export default function Home() {
                             alt={aboutImage.description} 
                             width={600} 
                             height={400} 
-                            className="rounded-lg shadow-lg"
+                            className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                             data-ai-hint={aboutImage.imageHint}
                         />
                     )}
@@ -152,7 +152,7 @@ export default function Home() {
                               alt={schemeImage.description} 
                               width={600} 
                               height={400} 
-                              className="rounded-lg shadow-lg"
+                              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                               data-ai-hint={schemeImage.imageHint}
                           />
                       )}
