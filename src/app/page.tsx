@@ -16,7 +16,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
 import { useChatbot } from "@/components/ai/Chatbot";
-import React from "react";
+import React, { useState } from "react";
 
 
 const icons: { [key: string]: React.ReactNode } = {
@@ -40,7 +40,7 @@ export default function Home() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-us-1');
   const schemeImage = PlaceHolderImages.find(p => p.id === 'scheme-highlight-1');
   const ctaImage = PlaceHolderImages.find(p => p.id === 'cta-1');
-
+  
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -57,11 +57,11 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in duration-[2000ms] transition-transform hover:scale-105">{pageContent.hero.title}</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-[2000ms] delay-500 transition-transform hover:scale-105">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in duration-1000">{pageContent.hero.title}</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-1000 delay-500">
             {pageContent.hero.subtitle}
           </p>
-          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-[2000ms] delay-1000 transition-transform hover:scale-105">
+          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-1000 delay-1000 transition-transform hover:scale-105">
             <Link href="/weather">{pageContent.hero.cta}</Link>
           </Button>
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
                             alt={aboutImage.description} 
                             width={600} 
                             height={400} 
-                            className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                            className="rounded-lg shadow-lg"
                             data-ai-hint={aboutImage.imageHint}
                         />
                     )}
@@ -152,7 +152,7 @@ export default function Home() {
                               alt={schemeImage.description} 
                               width={600} 
                               height={400} 
-                              className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                              className="rounded-lg shadow-lg"
                               data-ai-hint={schemeImage.imageHint}
                           />
                       )}
