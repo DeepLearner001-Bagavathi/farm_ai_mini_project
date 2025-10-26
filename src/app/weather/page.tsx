@@ -41,18 +41,18 @@ export default function WeatherPage() {
                     key={weather.day} 
                     className={cn(
                         `flex flex-col items-center p-4 rounded-lg text-center cursor-pointer transition-all duration-300`,
-                        activeIndex === index ? 'bg-accent/20 scale-105' : 'hover:bg-secondary/50'
+                        activeIndex === index ? 'bg-accent text-accent-foreground scale-105' : 'hover:bg-secondary/50'
                     )}
                     onClick={() => handleDayClick(index)}
                 >
                   <p className="font-bold text-lg">{weather.day}</p>
                   <div className={cn(
                       "my-4",
-                      activeIndex === index ? 'text-accent-foreground' : 'text-primary'
+                      activeIndex !== index && 'text-primary'
                     )}>{icons[weather.iconId]}</div>
                   <p className="text-2xl font-bold">{weather.temp}</p>
                   <p className={cn(
-                      activeIndex === index ? 'text-accent-foreground/80' : 'text-muted-foreground'
+                      activeIndex !== index && 'text-muted-foreground'
                     )}>{weather.condition}</p>
                 </div>
               ))}
