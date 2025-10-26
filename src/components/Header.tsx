@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { useChatbot } from "./ai/Chatbot";
+import { useChatbot } from "@/components/ai/Chatbot";
 
 const navLinks = [
   { href: "/", label: "Home" },

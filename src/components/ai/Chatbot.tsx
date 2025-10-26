@@ -34,9 +34,19 @@ export const useChatbot = () => {
   return context;
 };
 
+export function ChatbotProvider({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+  const contextValue = useMemo(() => ({ open, setOpen }), [open, setOpen]);
+  return (
+    <ChatbotContext.Provider value={contextValue}>
+      {children}
+    </ChatbotContext.Provider>
+  );
+}
+
 
 export function Chatbot() {
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useChatbot();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -50,9 +60,6 @@ export function Chatbot() {
       });
     }
   }, [messages]);
-  
-  const contextValue = useMemo(() => ({ open, setOpen }), [open, setOpen]);
-
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,7 +91,6 @@ export function Chatbot() {
   };
 
   return (
-    <ChatbotContext.Provider value={contextValue}>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="h-screen max-h-screen w-screen max-w-none flex flex-col p-0">
           <DialogHeader className="p-4 border-b">
@@ -155,6 +161,5 @@ export function Chatbot() {
           </div>
         </DialogContent>
       </Dialog>
-    </ChatbotContext.Provider>
   );
 }
