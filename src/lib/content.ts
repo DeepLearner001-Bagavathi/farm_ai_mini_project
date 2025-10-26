@@ -75,12 +75,15 @@ export const content = {
     weatherPage: {
         title: "Weather Forecast",
         subtitle: "5-day forecast for Tamil Nadu (sample data).",
+        detailsTitle: "Detailed Forecast for",
+        humidity: "Humidity",
+        wind: "Wind",
         weatherData: [
-            { day: "Today", temp: "32°C", condition: "Sunny", iconId: "sunny" },
-            { day: "Tomorrow", temp: "31°C", condition: "Partly Cloudy", iconId: "cloudy" },
-            { day: "Fri, 28", temp: "29°C", condition: "Rain", iconId: "rain" },
-            { day: "Sat, 29", temp: "30°C", condition: "Thunderstorm", iconId: "thunder" },
-            { day: "Sun, 30", temp: "33°C", condition: "Sunny", iconId: "sunny" },
+            { day: "Today", temp: "32°C", condition: "Sunny", iconId: "sunny", details: "Clear skies with plenty of sunshine. A great day for field work.", humidity: "60%", wind: "10 km/h" },
+            { day: "Tomorrow", temp: "31°C", condition: "Partly Cloudy", iconId: "cloudy", details: "A mix of sun and clouds. Low chance of rain.", humidity: "65%", wind: "12 km/h" },
+            { day: "Fri, 28", temp: "29°C", condition: "Rain", iconId: "rain", details: "Light to moderate showers expected throughout the day. Best to plan indoor activities.", humidity: "80%", wind: "15 km/h" },
+            { day: "Sat, 29", temp: "30°C", condition: "Thunderstorm", iconId: "thunder", details: "Risk of thunderstorms in the afternoon. Take necessary precautions.", humidity: "85%", wind: "18 km/h" },
+            { day: "Sun, 30", temp: "33°C", condition: "Sunny", iconId: "sunny", details: "Hot and sunny day. Ensure proper irrigation for crops.", humidity: "55%", wind: "8 km/h" },
         ]
     },
     marketPricesPage: {
@@ -235,12 +238,15 @@ export const content = {
     weatherPage: {
         title: "வானிலை முன்னறிவிப்பு",
         subtitle: "தமிழ்நாட்டிற்கான 5-நாள் முன்னறிவிப்பு (தற்காலிக தரவு).",
+        detailsTitle: "விரிவான முன்னறிவிப்பு -",
+        humidity: "ஈரப்பதம்",
+        wind: "காற்றின் வேகம்",
         weatherData: [
-            { day: "இன்று", temp: "32°C", condition: "வெயில்", iconId: "sunny" },
-            { day: "நாளை", temp: "31°C", condition: "பகுதி மேகமூட்டம்", iconId: "cloudy" },
-            { day: "வெள்ளி, 28", temp: "29°C", condition: "மழை", iconId: "rain" },
-            { day: "சனி, 29", temp: "30°C", condition: "இடியுடன் கூடிய மழை", iconId: "thunder" },
-            { day: "ஞாயிறு, 30", temp: "33°C", condition: "வெயில்", iconId: "sunny" },
+            { day: "இன்று", temp: "32°C", condition: "வெயில்", iconId: "sunny", details: "தெளிவான வானம், ஏராளமான சூரிய ஒளி. களப்பணிக்கு சிறந்த நாள்.", humidity: "60%", wind: "10 கி.மீ/மணி" },
+            { day: "நாளை", temp: "31°C", condition: "பகுதி மேகமூட்டம்", iconId: "cloudy", details: "சூரியன் மற்றும் மேகங்கள் கலந்த வானிலை. மழைக்கு வாய்ப்பு குறைவு.", humidity: "65%", wind: "12 கி.மீ/மணி" },
+            { day: "வெள்ளி, 28", temp: "29°C", condition: "மழை", iconId: "rain", details: "நாள் முழுவதும் லேசானது முதல் மிதமான மழை பெய்யக்கூடும். உட்புற நடவடிக்கைகளை திட்டமிடுவது நல்லது.", humidity: "80%", wind: "15 கி.மீ/மணி" },
+            { day: "சனி, 29", temp: "30°C", condition: "இடியுடன் கூடிய மழை", iconId: "thunder", details: "மாலையில் இடியுடன் கூடிய மழைக்கு வாய்ப்பு. தேவையான முன்னெச்சரிக்கை நடவடிக்கைகளை எடுக்கவும்.", humidity: "85%", wind: "18 கி.மீ/மணி" },
+            { day: "ஞாயிறு, 30", temp: "33°C", condition: "வெயில்", iconId: "sunny", details: "வெப்பமான மற்றும் வெயில் நாள். பயிர்களுக்கு சரியான நீர்ப்பாசனம் செய்வதை உறுதி செய்யவும்.", humidity: "55%", wind: "8 கி.மீ/மணி" },
         ]
     },
     marketPricesPage: {

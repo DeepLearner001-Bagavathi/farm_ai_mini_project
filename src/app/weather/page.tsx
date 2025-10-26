@@ -1,7 +1,8 @@
+
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Sun, Cloud, CloudRain, CloudLightning } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Sun, Cloud, CloudRain, CloudLightning, Droplets, Wind } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
 import { useState } from "react";
@@ -22,6 +23,8 @@ export default function WeatherPage() {
     const handleDayClick = (index: number) => {
         setActiveIndex(index);
     }
+
+    const selectedDayWeather = pageContent.weatherData[activeIndex];
 
   return (
     <div className="container mx-auto py-10">
@@ -52,6 +55,7 @@ export default function WeatherPage() {
                     )}>{icons[weather.iconId]}</div>
                   <p className="text-2xl font-bold">{weather.temp}</p>
                   <p className={cn(
+                      'transition-colors',
                       activeIndex !== index && 'text-muted-foreground'
                     )}>{weather.condition}</p>
                 </div>
@@ -60,6 +64,35 @@ export default function WeatherPage() {
           </CardContent>
         </Card>
       </div>
+
+      {selectedDayWeather && (
+          <div key={activeIndex} className="mt-8 animate-in fade-in slide-in-from-bottom-10 duration-700">
+              <Card>
+                  <CardHeader>
+                      <CardTitle className="font-headline text-2xl">{pageContent.detailsTitle} {selectedDayWeather.day}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                      <p className="text-muted-foreground text-lg">{selectedDayWeather.details}</p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
+                          <div className="bg-secondary p-4 rounded-lg">
+                              <div className="flex justify-center items-center gap-2">
+                                <Droplets className="w-6 h-6 text-primary" />
+                                <p className="text-lg font-semibold">{pageContent.humidity}</p>
+                              </div>
+                              <p className="text-2xl font-bold mt-2">{selectedDayWeather.humidity}</p>
+                          </div>
+                          <div className="bg-secondary p-4 rounded-lg">
+                              <div className="flex justify-center items-center gap-2">
+                                <Wind className="w-6 h-6 text-primary" />
+                                <p className="text-lg font-semibold">{pageContent.wind}</p>
+                              </div>
+                              <p className="text-2xl font-bold mt-2">{selectedDayWeather.wind}</p>
+                          </div>
+                      </div>
+                  </CardContent>
+              </Card>
+          </div>
+      )}
     </div>
   );
 }
