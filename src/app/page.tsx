@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -86,7 +87,7 @@ export default function Home() {
           >
             <CarouselContent>
               {features.map((feature, i) => (
-                <CarouselItem key={feature.id} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={feature.id} className="md:basis-1/2">
                   <div className="p-1 h-full">
                     <Card className="text-center flex flex-col hover:shadow-lg transition-shadow duration-300 h-full">
                       <CardHeader className="items-center">
