@@ -1,7 +1,6 @@
 'use server';
 
 import {ai} from '@/ai/genkit';
-import {generate} from 'genkit';
 import {type ChatInput} from '@/ai/chat-schema';
 
 const baseSystemPrompt = "You are an expert AI assistant for farmers in Tamil Nadu, India. Your name is 'TN Ulavan'. You must answer questions about agriculture, government schemes, and market prices relevant to Tamil Nadu. You must be friendly, helpful, and provide detailed, accurate information."
@@ -19,7 +18,7 @@ export async function chat(input: ChatInput): Promise<string> {
 
   const systemPrompt = `${baseSystemPrompt} ${languagePrompts[input.language]}`;
 
-  const response = await generate({
+  const response = await ai.generate({
     model: 'googleai/gemini-1.5-flash-latest',
     system: systemPrompt,
     prompt: input.message,
