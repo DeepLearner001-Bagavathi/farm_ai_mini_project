@@ -56,13 +56,17 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover:bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-radial from-white/25 to-transparent to-40% pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100" style={{
-            backgroundPosition: 'var(--x, 50%) var(--y, 50%)'
-        }} onMouseMove={(e) => {
+        <div
+          className="absolute inset-0 bg-gradient-radial from-white/25 to-transparent to-40% pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+          style={{
+            backgroundPosition: 'var(--x, 50%) var(--y, 50%)',
+          }}
+          onMouseMove={(e) => {
             const rect = e.currentTarget.getBoundingClientRect();
             e.currentTarget.style.setProperty('--x', `${((e.clientX - rect.left) / rect.width) * 100}%`);
             e.currentTarget.style.setProperty('--y', `${((e.clientY - rect.top) / rect.height) * 100}%`);
-        }}></div>
+          }}
+        ></div>
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in duration-[2000ms] transition-transform duration-300 hover:scale-105">{pageContent.hero.title}</h1>
           <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-[2000ms] delay-500 transition-transform duration-300 hover:scale-105">
