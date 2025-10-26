@@ -17,13 +17,10 @@ const icons: { [key: string]: React.ReactNode } = {
 export default function WeatherPage() {
     const { language } = useLanguage();
     const pageContent = content[language].weatherPage;
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number>(0);
 
     const handleDayClick = (index: number) => {
         setActiveIndex(index);
-        setTimeout(() => {
-            setActiveIndex(null);
-        }, 300)
     }
 
   return (
@@ -43,16 +40,20 @@ export default function WeatherPage() {
                 <div 
                     key={weather.day} 
                     className={cn(
-                        `flex flex-col items-center p-4 rounded-lg text-center cursor-pointer transition-transform duration-300`,
-                        index === 0 ? 'bg-secondary' : '',
-                        activeIndex === index ? 'scale-110' : 'scale-100'
+                        `flex flex-col items-center p-4 rounded-lg text-center cursor-pointer transition-all duration-300`,
+                        activeIndex === index ? 'bg-accent/20 scale-105' : 'hover:bg-secondary/50'
                     )}
                     onClick={() => handleDayClick(index)}
                 >
                   <p className="font-bold text-lg">{weather.day}</p>
-                  <div className="my-4 text-primary">{icons[weather.iconId]}</div>
+                  <div className={cn(
+                      "my-4",
+                      activeIndex === index ? 'text-accent-foreground' : 'text-primary'
+                    )}>{icons[weather.iconId]}</div>
                   <p className="text-2xl font-bold">{weather.temp}</p>
-                  <p className="text-muted-foreground">{weather.condition}</p>
+                  <p className={cn(
+                      activeIndex === index ? 'text-accent-foreground/80' : 'text-muted-foreground'
+                    )}>{weather.condition}</p>
                 </div>
               ))}
             </div>
