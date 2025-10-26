@@ -92,7 +92,7 @@ export function Chatbot() {
 
   return (
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="h-screen max-h-screen w-screen max-w-none flex flex-col p-0">
+        <DialogContent className="fixed bottom-4 right-4 top-auto left-auto w-[90vw] max-w-md h-[70vh] flex flex-col p-0 translate-x-0 translate-y-0 data-[state=closed]:slide-out-to-bottom-full data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-bottom-full data-[state=open]:slide-in-from-right-full">
           <DialogHeader className="p-4 border-b">
             <DialogTitle>AI Assistant</DialogTitle>
           </DialogHeader>
