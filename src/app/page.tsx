@@ -3,11 +3,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { CloudSun, BarChart, ScrollText, Bot } from "lucide-react";
 import Image from "next/image";
@@ -15,8 +10,6 @@ import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
 import { useChatbot } from "@/components/ai/Chatbot";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
 
 
 const icons: { [key: string]: React.ReactNode } = {
@@ -32,9 +25,6 @@ export default function Home() {
   const { setOpen: setChatbotOpen } = useChatbot();
   const pageContent = content[language].homePage;
   const features = pageContent.features;
-  const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
 
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-farm-1');
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-us-1');
@@ -74,49 +64,34 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline animate-in fade-in slide-in-from-bottom-10 duration-700">{pageContent.featuresTitle}</h2>
             <p className="mt-2 text-lg text-muted-foreground animate-in fade-in slide-in-from-bottom-10 duration-700 delay-100">{pageContent.featuresSubtitle}</p>
           </div>
-          <Carousel
-            plugins={[plugin.current]}
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-sm md:max-w-xl lg:max-w-4xl mx-auto"
-          >
-            <CarouselContent>
-              {features.map((feature, i) => (
-                <CarouselItem key={feature.id} className="md:basis-1/2">
-                  <div className="p-1 h-full">
-                    <Card className="text-center flex flex-col hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
-                      <CardHeader className="items-center">
-                        <div className="p-4 bg-accent/20 rounded-full">
-                          {icons[feature.id]}
-                        </div>
-                        <CardTitle className="mt-4 font-headline">{feature.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-grow">
-                        <p className="text-muted-foreground">{feature.description}</p>
-                      </CardContent>
-                      <div className="p-6 pt-0">
-                        {feature.href ? (
-                          <Button asChild variant="outline">
-                            <Link href={feature.href}>{pageContent.learnMore}</Link>
-                          </Button>
-                        ) : (
-                          <Button variant="outline" onClick={() => setChatbotOpen(true)}>
-                            {pageContent.learnMore}
-                          </Button>
-                        )}
-                      </div>
-                    </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, i) => (
+              <div key={feature.id} className="animate-in fade-in slide-in-from-bottom-12 duration-700" style={{animationDelay: `${i * 150}ms`}}>
+                <Card className="text-center flex flex-col hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
+                  <CardHeader className="items-center">
+                    <div className="p-4 bg-accent/20 rounded-full">
+                      {icons[feature.id]}
+                    </div>
+                    <CardTitle className="mt-4 font-headline">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                  <div className="p-6 pt-0">
+                    {feature.href ? (
+                      <Button asChild variant="outline">
+                        <Link href={feature.href}>{pageContent.learnMore}</Link>
+                      </Button>
+                    ) : (
+                      <Button variant="outline" onClick={() => setChatbotOpen(true)}>
+                        {pageContent.learnMore}
+                      </Button>
+                    )}
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            
-            
-          </Carousel>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
