@@ -61,7 +61,7 @@ export default function Home() {
           <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-1000 delay-500">
             {pageContent.hero.subtitle}
           </p>
-          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-1000 delay-1000 transition-transform hover:scale-105">
+          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-1000 delay-1000 transition-transform hover:scale-105 hover:animate-pulse">
             <Link href="/weather">{pageContent.hero.cta}</Link>
           </Button>
         </div>
