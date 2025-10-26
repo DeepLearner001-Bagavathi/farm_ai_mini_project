@@ -33,7 +33,7 @@ export default function Home() {
   const pageContent = content[language].homePage;
   const features = pageContent.features;
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, playOnInit: true, playDirection: "forward" })
+    Autoplay({ delay: 2000, stopOnInteraction: false, playDirection: "forward" })
   );
 
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-farm-1');
@@ -57,11 +57,11 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in duration-[2000ms]">{pageContent.hero.title}</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-[2000ms] delay-500">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in duration-[2000ms] transition-transform hover:scale-105">{pageContent.hero.title}</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-[2000ms] delay-500 transition-transform hover:scale-105">
             {pageContent.hero.subtitle}
           </p>
-          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-[2000ms] delay-1000">
+          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-[2000ms] delay-1000 transition-transform hover:scale-105">
             <Link href="/weather">{pageContent.hero.cta}</Link>
           </Button>
         </div>
@@ -120,12 +120,12 @@ export default function Home() {
       <section className="py-12 md:py-20 overflow-hidden">
         <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="order-2 md:order-1 animate-in fade-in slide-in-from-left-20 duration-1000">
+                <div className="animate-in fade-in slide-in-from-left-20 duration-1000">
                     <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">{pageContent.aboutSection.title}</h2>
                     <p className="text-muted-foreground mb-4">{pageContent.aboutSection.p1}</p>
                     <p className="text-muted-foreground">{pageContent.aboutSection.p2}</p>
                 </div>
-                <div className="order-1 md:order-2 animate-in fade-in slide-in-from-right-20 duration-1000">
+                <div className="animate-in fade-in slide-in-from-right-20 duration-1000">
                     {aboutImage && (
                         <Image 
                             src={aboutImage.imageUrl} 
