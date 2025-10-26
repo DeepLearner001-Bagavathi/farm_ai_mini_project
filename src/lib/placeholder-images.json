@@ -9,19 +9,19 @@
     {
       "id": "about-us-1",
       "description": "A group of farmers in Tamil Nadu discussing and smiling.",
-      "imageUrl": "https://images.unsplash.com/photo-1580223583584-37alasdkjf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXJtJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2MTQ3MjY3MXww&ixlib=rb-4.1.0&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1751797972069-4c4f64dde04a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYXJtZXJzJTIwZGlzY3Vzc2luZ3xlbnwwfHx8fDE3NjE0OTU0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "farmers discussing"
     },
     {
       "id": "scheme-highlight-1",
       "description": "Close-up of hands holding soil with a young plant.",
-      "imageUrl": "https://images.unsplash.com/photo-1495107334309-fasd89fwefasd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXJtJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2MTQ3MjY3MXww&ixlib=rb-4.1.0&q=80&w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1725434631952-c8e3052c2899?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2lsJTIwcGxhbnR8ZW58MHx8fHwxNzYxNDk1NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "soil plant"
     },
     {
       "id": "cta-1",
       "description": "A farmer using a smartphone in a field.",
-      "imageUrl": "https://images.unsplash.com/photo-1580223583584-37a2e2a2e2a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXJtJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2MTQ3MjY3MXww&ixlib=rb-4.1.0&q=80&w=1920",
+      "imageUrl": "https://images.unsplash.com/photo-1679128719010-aaa99859ad97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXJtZXIlMjBzbWFydHBob25lfGVufDB8fHx8MTc2MTQ5NTQxNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "farmer smartphone"
     }
   ]
