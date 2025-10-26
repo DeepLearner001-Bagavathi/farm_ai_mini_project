@@ -9,7 +9,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { CloudSun, BarChart, ScrollText } from "lucide-react";
+import { CloudSun, BarChart, ScrollText, Bot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
@@ -23,6 +23,7 @@ const icons: { [key: string]: React.ReactNode } = {
   weather: <CloudSun className="w-8 h-8 text-accent" />,
   market: <BarChart className="w-8 h-8 text-accent" />,
   schemes: <ScrollText className="w-8 h-8 text-accent" />,
+  assistant: <Bot className="w-8 h-8 text-accent" />,
 };
 
 
@@ -98,9 +99,15 @@ export default function Home() {
                         <p className="text-muted-foreground">{feature.description}</p>
                       </CardContent>
                       <div className="p-6 pt-0">
-                        <Button asChild variant="outline">
-                          <Link href={feature.href}>{pageContent.learnMore}</Link>
-                        </Button>
+                        {feature.href ? (
+                          <Button asChild variant="outline">
+                            <Link href={feature.href}>{pageContent.learnMore}</Link>
+                          </Button>
+                        ) : (
+                          <Button variant="outline" onClick={() => setChatbotOpen(true)}>
+                            {pageContent.learnMore}
+                          </Button>
+                        )}
                       </div>
                     </Card>
                   </div>

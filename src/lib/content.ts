@@ -1,3 +1,4 @@
+
 export const content = {
   en: {
     header: {
@@ -47,6 +48,13 @@ export const content = {
           description: "Discover and apply for beneficial government schemes and subsidies.",
           href: "/schemes",
         },
+        {
+            id: "assistant",
+            icon: "Bot",
+            title: "AI Assistant",
+            description: "Get instant answers to your farming questions from our AI chatbot.",
+            href: "",
+        }
       ],
       aboutSection: {
         title: "About TN Agri Mitra",
@@ -200,6 +208,13 @@ export const content = {
           description: "பயனுள்ள அரசாங்க திட்டங்கள் மற்றும் மானியங்களைக் கண்டறிந்து விண்ணப்பிக்கவும்.",
           href: "/schemes",
         },
+        {
+            id: "assistant",
+            icon: "Bot",
+            title: "AI உதவியாளர்",
+            description: "எங்கள் AI చాట్బాట్ மூலம் உங்கள் விவசாய கேள்விகளுக்கு உடனடி பதில்களைப் பெறுங்கள்.",
+            href: "",
+        }
       ],
       aboutSection: {
         title: "TN Agri Mitra பற்றி",
