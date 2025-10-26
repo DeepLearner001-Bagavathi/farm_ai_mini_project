@@ -13,7 +13,6 @@ const navLinks = [
   { href: "/weather", label: "Weather" },
   { href: "/market-prices", label: "Market Prices" },
   { href: "/schemes", label: "Schemes" },
-  { href: "/assistant", label: "AI Assistant" },
   { href: "/contact", label: "Contact" },
 ];
 
