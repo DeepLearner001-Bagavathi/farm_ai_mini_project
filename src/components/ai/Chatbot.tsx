@@ -101,7 +101,7 @@ export function Chatbot() {
       <Button
         variant="default"
         size="icon"
-        className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg z-50"
+        className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg z-50 transition-transform hover:scale-110"
         onClick={() => setOpen(true)}
       >
         <MessageCircle className="h-7 w-7" />
