@@ -98,11 +98,11 @@ export default function Home() {
                             </CardContent>
                             <div className="p-6 pt-0">
                                 {feature.href ? (
-                                <Button asChild variant="outline">
+                                <Button asChild variant="outline" className="transition-transform hover:scale-105">
                                     <Link href={feature.href}>{pageContent.learnMore}</Link>
                                 </Button>
                                 ) : (
-                                <Button variant="outline" onClick={() => setChatbotOpen(true)}>
+                                <Button variant="outline" onClick={() => setChatbotOpen(true)} className="transition-transform hover:scale-105">
                                     {pageContent.learnMore}
                                 </Button>
                                 )}
@@ -132,7 +132,7 @@ export default function Home() {
                             alt={aboutImage.description} 
                             width={600} 
                             height={400} 
-                            className="rounded-lg shadow-lg"
+                            className="rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
                             data-ai-hint={aboutImage.imageHint}
                         />
                     )}
@@ -152,7 +152,7 @@ export default function Home() {
                               alt={schemeImage.description} 
                               width={600} 
                               height={400} 
-                              className="rounded-lg shadow-lg"
+                              className="rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
                               data-ai-hint={schemeImage.imageHint}
                           />
                       )}
