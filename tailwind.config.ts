@@ -16,6 +16,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         body: ['var(--font-family-body)', 'sans-serif'],
         headline: ['var(--font-family-headline)', 'sans-serif'],
