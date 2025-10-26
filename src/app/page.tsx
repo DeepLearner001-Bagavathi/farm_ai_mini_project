@@ -48,7 +48,7 @@ export default function Home() {
           <p className="mt-4 text-lg md:text-xl max-w-2xl">
             {pageContent.hero.subtitle}
           </p>
-          <Button asChild size="lg" className="mt-8">
+          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/weather">{pageContent.hero.cta}</Link>
           </Button>
         </div>
