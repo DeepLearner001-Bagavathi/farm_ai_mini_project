@@ -57,8 +57,8 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative container mx-auto h-full flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in duration-1000">{pageContent.hero.title}</h1>
-          <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-1000 delay-500">
+          <h1 className="text-4xl md:text-6xl font-bold font-headline animate-in fade-in slide-in-from-bottom-10 duration-1000">{pageContent.hero.title}</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500">
             {pageContent.hero.subtitle}
           </p>
           <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-1000 delay-1000 transition-transform hover:-translate-y-2">
