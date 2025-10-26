@@ -3,25 +3,25 @@
     {
       "id": "hero-farm-1",
       "description": "A lush green farm landscape in Tamil Nadu under a clear sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1715694293123-f7a074c72199?w=600",
+      "imageUrl": "https://images.unsplash.com/photo-1700378232912-83bbfaedb9a3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1631",
       "imageHint": "sunset mountains"
     },
     {
       "id": "about-us-1",
       "description": "A group of farmers in Tamil Nadu discussing and smiling.",
-      "imageUrl": "https://images.unsplash.com/photo-1751797972069-4c4f64dde04a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYXJtZXJzJTIwZGlzY3Vzc2luZ3xlbnwwfHx8fDE3NjE0OTU0MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517404880-3c2241b3a373?w=600",
       "imageHint": "farmers discussing"
     },
     {
       "id": "scheme-highlight-1",
       "description": "Close-up of hands holding soil with a young plant.",
-      "imageUrl": "https://images.unsplash.com/photo-1725434631952-c8e3052c2899?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzb2lsJTIwcGxhbnR8ZW58MHx8fHwxNzYxNDk1NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=600",
       "imageHint": "soil plant"
     },
     {
       "id": "cta-1",
       "description": "A farmer using a smartphone in a field.",
-      "imageUrl": "https://images.unsplash.com/photo-1679128719010-aaa99859ad97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXJtZXIlMjBzbWFydHBob25lfGVufDB8fHx8MTc2MTQ5NTQxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1625246333195-b9d6a33cf642?w=600",
       "imageHint": "farmer smartphone"
     }
   ]
