@@ -82,7 +82,7 @@ export function Chatbot() {
       console.error("Error getting response from AI:", error);
       const errorMessage: Message = {
         role: "model",
-        content: "Sorry, I encountered an error. Please try again.",
+        content: "மன்னிக்கவும், ஒரு பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.",
       };
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
@@ -94,7 +94,7 @@ export function Chatbot() {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="fixed bottom-4 right-4 top-auto left-auto w-[90vw] max-w-md h-[70vh] flex flex-col p-0 translate-x-0 translate-y-0 data-[state=closed]:slide-out-to-bottom-full data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-bottom-full data-[state=open]:slide-in-from-right-full">
           <DialogHeader className="p-4 border-b">
-            <DialogTitle>AI Assistant</DialogTitle>
+            <DialogTitle>AI உதவியாளர்</DialogTitle>
           </DialogHeader>
           <div className="flex-1 flex flex-col overflow-hidden">
             <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
@@ -144,7 +144,7 @@ export function Chatbot() {
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask me anything about farming in Tamil Nadu..."
+                  placeholder="தமிழ்நாட்டில் விவசாயம் பற்றி எதையும் கேளுங்கள்..."
                   className="flex-1"
                   disabled={loading}
                 />
@@ -154,7 +154,7 @@ export function Chatbot() {
                   ) : (
                     <Send className="w-4 h-4" />
                   )}
-                  <span className="sr-only">Send</span>
+                  <span className="sr-only">அனுப்பு</span>
                 </Button>
               </form>
             </div>

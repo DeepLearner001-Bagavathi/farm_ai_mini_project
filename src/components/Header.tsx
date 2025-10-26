@@ -10,11 +10,11 @@ import { useState } from "react";
 import { useChatbot } from "@/components/ai/Chatbot";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/weather", label: "Weather" },
-  { href: "/market-prices", label: "Market Prices" },
-  { href: "/schemes", label: "Schemes" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "முகப்பு" },
+  { href: "/weather", label: "வானிலை" },
+  { href: "/market-prices", label: "சந்தை விலைகள்" },
+  { href: "/schemes", label: "திட்டங்கள்" },
+  { href: "/contact", label: "தொடர்புக்கு" },
 ];
 
 export function Header() {
@@ -46,14 +46,14 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end gap-2">
            <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
               <MessageCircle className="h-5 w-5" />
-              <span className="sr-only">Open AI Chat</span>
+              <span className="sr-only">AI அரட்டையைத் திற</span>
             </Button>
           <div className="md:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
+                  <span className="sr-only">மெனுவைத் திற</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">

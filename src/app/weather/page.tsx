@@ -2,20 +2,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Sun, Cloud, CloudRain, CloudLightning } from "lucide-react";
 
 const weatherData = [
-  { day: "Today", temp: "32°C", condition: "Sunny", icon: <Sun className="w-10 h-10" /> },
-  { day: "Tomorrow", temp: "31°C", condition: "Partly Cloudy", icon: <Cloud className="w-10 h-10" /> },
-  { day: "Fri, 28", temp: "29°C", condition: "Showers", icon: <CloudRain className="w-10 h-10" /> },
-  { day: "Sat, 29", temp: "30°C", condition: "Thunderstorms", icon: <CloudLightning className="w-10 h-10" /> },
-  { day: "Sun, 30", temp: "33°C", condition: "Sunny", icon: <Sun className="w-10 h-10" /> },
+  { day: "இன்று", temp: "32°C", condition: "வெயில்", icon: <Sun className="w-10 h-10" /> },
+  { day: "நாளை", temp: "31°C", condition: "பகுதி மேகமூட்டம்", icon: <Cloud className="w-10 h-10" /> },
+  { day: "வெள்ளி, 28", temp: "29°C", condition: "மழை", icon: <CloudRain className="w-10 h-10" /> },
+  { day: "சனி, 29", temp: "30°C", condition: "இடியுடன் கூடிய மழை", icon: <CloudLightning className="w-10 h-10" /> },
+  { day: "ஞாயிறு, 30", temp: "33°C", condition: "வெயில்", icon: <Sun className="w-10 h-10" /> },
 ];
 
 export default function WeatherPage() {
   return (
     <div className="container mx-auto py-10">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold font-headline">Weather Forecast</h1>
+        <h1 className="text-4xl font-bold font-headline">வானிலை முன்னறிவிப்பு</h1>
         <p className="mt-2 text-lg text-muted-foreground">
-          5-Day forecast for Tamil Nadu (Placeholder Data).
+          தமிழ்நாட்டிற்கான 5-நாள் முன்னறிவிப்பு (தற்காலிக தரவு).
         </p>
       </div>
 
