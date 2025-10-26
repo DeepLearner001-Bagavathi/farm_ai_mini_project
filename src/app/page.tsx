@@ -44,13 +44,13 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-screen">
+      <section className="relative w-full h-screen overflow-hidden">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover"
+            className="object-cover animate-in fade-in zoom-in-105 duration-[6000ms]"
             priority
             data-ai-hint={heroImage.imageHint}
           />
