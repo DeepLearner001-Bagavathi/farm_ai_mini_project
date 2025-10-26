@@ -20,10 +20,10 @@ import { useRef } from "react";
 
 
 const icons: { [key: string]: React.ReactNode } = {
-  weather: <CloudSun className="w-8 h-8 text-accent" />,
-  market: <BarChart className="w-8 h-8 text-accent" />,
-  schemes: <ScrollText className="w-8 h-8 text-accent" />,
-  assistant: <Bot className="w-8 h-8 text-accent" />,
+  weather: <CloudSun className="w-8 h-8 text-primary" />,
+  market: <BarChart className="w-8 h-8 text-primary" />,
+  schemes: <ScrollText className="w-8 h-8 text-primary" />,
+  assistant: <Bot className="w-8 h-8 text-primary" />,
 };
 
 
@@ -61,7 +61,7 @@ export default function Home() {
           <p className="mt-4 text-lg md:text-xl max-w-2xl animate-in fade-in duration-[2000ms] delay-500">
             {pageContent.hero.subtitle}
           </p>
-          <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90 animate-in fade-in duration-[2000ms] delay-1000">
+          <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90 animate-in fade-in duration-[2000ms] delay-1000">
             <Link href="/weather">{pageContent.hero.cta}</Link>
           </Button>
         </div>
@@ -88,7 +88,7 @@ export default function Home() {
               {features.map((feature, i) => (
                 <CarouselItem key={feature.id} className="md:basis-1/2">
                   <div className="p-1 h-full">
-                    <Card className="text-center flex flex-col hover:shadow-lg transition-shadow duration-300 h-full">
+                    <Card className="text-center flex flex-col hover:shadow-xl hover:scale-105 transition-all duration-300 h-full">
                       <CardHeader className="items-center">
                         <div className="p-4 bg-accent/20 rounded-full">
                           {icons[feature.id]}
