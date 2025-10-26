@@ -110,7 +110,7 @@ export default function Home() {
               ))}
             </CarouselContent>
             <CarouselPrevious />
-            <CarouselNext />
+            
           </Carousel>
         </div>
       </section>
