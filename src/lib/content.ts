@@ -66,15 +66,18 @@ export const content = {
         facts: [
           {
             id: "fact-1",
-            text: "Tamil Nadu is one of the leading producers of turmeric, bananas, and flowers in India."
+            title: "Major Producer State",
+            text: "Tamil Nadu is one of the leading producers of turmeric, bananas, and flowers in India, contributing significantly to the nation's agricultural output."
           },
           {
             id: "fact-2",
-            text: "Drip irrigation, a water-saving method, is extensively promoted and subsidized in the state."
+            title: "Water-Saving Innovation",
+            text: "Drip irrigation, a modern water-saving method, is extensively promoted and subsidized by the government in Tamil Nadu to combat water scarcity and improve crop yields."
           },
           {
             id: "fact-3",
-            text: "The state enjoys a tropical climate, allowing for the cultivation of crops throughout the year."
+            title: "Year-Round Cultivation",
+            text: "Thanks to its tropical climate, Tamil Nadu enjoys favorable conditions that allow for the cultivation of a diverse range of crops throughout the entire year."
           }
         ]
       },
@@ -246,15 +249,18 @@ export const content = {
         facts: [
           {
             id: "fact-1",
-            text: "இந்தியாவில் மஞ்சள், வாழைப்பழம் மற்றும் பூக்கள் உற்பத்தியில் தமிழ்நாடு முன்னணி மாநிலங்களில் ஒன்றாகும்."
+            title: "முக்கிய உற்பத்தியாளர் மாநிலம்",
+            text: "இந்தியாவின் மஞ்சள், வாழைப்பழங்கள் மற்றும் பூக்கள் உற்பத்தியில் தமிழ்நாடு முன்னணி மாநிலங்களில் ஒன்றாக உள்ளது, இது நாட்டின் விவசாய உற்பத்திக்கு குறிப்பிடத்தக்க பங்களிப்பை அளிக்கிறது."
           },
           {
             id: "fact-2",
-            text: "நீர் சேமிப்பு முறையான சொட்டு நீர் பாசனம், மாநிலத்தில் விரிவாக ஊக்குவிக்கப்பட்டு மானியம் வழங்கப்படுகிறது."
+            title: "நீர் சேமிப்பு கண்டுபிடிப்பு",
+            text: "தண்ணீர் பற்றாக்குறையை எதிர்த்துப் போராடுவதற்கும் பயிர் விளைச்சலை மேம்படுத்துவதற்கும், ஒரு நவீன நீர் சேமிப்பு முறையான சொட்டு நீர் பாசனம், தமிழ்நாட்டில் அரசாங்கத்தால் விரிவாக ஊக்குவிக்கப்பட்டு மானியம் வழங்கப்படுகிறது."
           },
           {
             id: "fact-3",
-            text: "மாநிலம் வெப்பமண்டல காலநிலையை கொண்டுள்ளது, இது ஆண்டு முழுவதும் பயிர்களை பயிரிட அனுமதிக்கிறது."
+            title: "ஆண்டு முழுவதும் சாகுபடி",
+            text: "அதன் வெப்பமண்டல காலநிலைக்கு நன்றி, தமிழ்நாடு ஆண்டு முழுவதும் பல்வேறு வகையான பயிர்களை பயிரிடுவதற்கு சாதகமான நிலைமைகளைக் கொண்டுள்ளது."
           }
         ]
       },

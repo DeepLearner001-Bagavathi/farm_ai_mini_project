@@ -10,13 +10,13 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { CloudSun, BarChart, ScrollText, Bot, Leaf, Droplet, Sun } from "lucide-react";
+import { CloudSun, BarChart, ScrollText, Bot } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
 import { useChatbot } from "@/components/ai/Chatbot";
-import React, { useState } from "react";
+import React from "react";
 
 
 const icons: { [key: string]: React.ReactNode } = {
@@ -25,13 +25,6 @@ const icons: { [key: string]: React.ReactNode } = {
   schemes: <ScrollText className="w-8 h-8 text-primary" />,
   assistant: <Bot className="w-8 h-8 text-primary" />,
 };
-
-const factIcons: { [key: string]: React.ReactNode } = {
-    "fact-1": <Leaf className="w-8 h-8 text-accent" />,
-    "fact-2": <Droplet className="w-8 h-8 text-accent" />,
-    "fact-3": <Sun className="w-8 h-8 text-accent" />,
-};
-
 
 export default function Home() {
   const { language } = useLanguage();
@@ -148,26 +141,36 @@ export default function Home() {
       </section>
 
       {/* Facts Section */}
-      <section className="py-12 md:py-20 bg-background">
+      <section className="py-12 md:py-20 bg-background overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline animate-in fade-in slide-in-from-bottom-10 duration-700">{pageContent.factsSection.title}</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pageContent.factsSection.facts.map((fact, i) => (
-                <div key={fact.id} className="animate-in fade-in slide-in-from-bottom-12 duration-700" style={{animationDelay: `${i * 150}ms`}}>
-                    <Card className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
-                        <CardHeader className="items-center">
-                            <div className="p-4 bg-secondary rounded-full">
-                                {factIcons[fact.id]}
-                            </div>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground text-lg">{fact.text}</p>
-                        </CardContent>
-                    </Card>
+          <div className="space-y-16">
+            {pageContent.factsSection.facts.map((fact, index) => {
+              const factImage = PlaceHolderImages.find(p => p.id === fact.id);
+              const isEven = index % 2 === 0;
+              return (
+                <div key={fact.id} className="grid md:grid-cols-2 gap-12 items-center animate-in fade-in slide-in-from-bottom-12 duration-1000">
+                  <div className={`order-1 ${isEven ? 'md:order-1' : 'md:order-2'}`}>
+                    {factImage && (
+                      <Image
+                        src={factImage.imageUrl}
+                        alt={factImage.description}
+                        width={600}
+                        height={400}
+                        className="rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                        data-ai-hint={factImage.imageHint}
+                      />
+                    )}
+                  </div>
+                  <div className={`order-2 ${isEven ? 'md:order-2' : 'md:order-1'}`}>
+                    <h3 className="text-2xl font-bold font-headline mb-4">{fact.title}</h3>
+                    <p className="text-muted-foreground">{fact.text}</p>
+                  </div>
                 </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
