@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { Leaf, Menu, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -71,6 +78,12 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Menu</SheetTitle>
+                  <SheetDescription>
+                    Main navigation menu for the application
+                  </SheetDescription>
+                </SheetHeader>
                 <div className="grid gap-4 py-6">
                   <Link href="/" className="flex items-center gap-2 mb-4" onClick={() => setSheetOpen(false)}>
                     <Leaf className="h-6 w-6 text-accent" />
