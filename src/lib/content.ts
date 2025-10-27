@@ -61,6 +61,23 @@ export const content = {
         p1: "TN Ulavan is a digital platform designed to empower farmers in Tamil Nadu with the latest technology and information. Our goal is to make farming more profitable, sustainable, and efficient.",
         p2: "From real-time weather updates and market prices to detailed information about government schemes, we provide a comprehensive suite of tools to support you at every stage of the farming lifecycle.",
       },
+      factsSection: {
+        title: "Did You Know?",
+        facts: [
+          {
+            id: "fact-1",
+            text: "Tamil Nadu is one of the leading producers of turmeric, bananas, and flowers in India."
+          },
+          {
+            id: "fact-2",
+            text: "Drip irrigation, a water-saving method, is extensively promoted and subsidized in the state."
+          },
+          {
+            id: "fact-3",
+            text: "The state enjoys a tropical climate, allowing for the cultivation of crops throughout the year."
+          }
+        ]
+      },
       schemeHighlight: {
         title: "Scheme in Focus: PM-KISAN",
         description: "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a central government scheme that provides income support of ₹6,000 per year to all landholding farmer families. This initiative aims to supplement their financial needs for procuring various inputs related to agriculture and allied activities as well as domestic needs.",
@@ -223,6 +240,23 @@ export const content = {
         title: "TN உழவன் பற்றி",
         p1: "TN உழவன் என்பது தமிழ்நாட்டு விவசாயிகளுக்கு சமீபத்திய தொழில்நுட்பம் மற்றும் தகவல்களுடன் அதிகாரம் அளிக்க வடிவமைக்கப்பட்ட ஒரு டிஜிட்டல் தளமாகும். விவசாயத்தை அதிக லாபகரமானதாகவும், நிலையானதாகவும், திறமையாகவும் மாற்றுவதே எங்கள் குறிக்கோள்.",
         p2: "நிகழ்நேர வானிலை அறிவிப்புகள் மற்றும் சந்தை விலைகள் முதல் அரசாங்க திட்டங்கள் பற்றிய விரிவான தகவல்கள் வரை, விவசாய வாழ்க்கைச் சுழற்சியின் ஒவ்வொரு கட்டத்திலும் உங்களை ஆதரிக்க ஒரு விரிவான கருவிகளை நாங்கள் வழங்குகிறோம்.",
+      },
+      factsSection: {
+        title: "உங்களுக்குத் தெரியுமா?",
+        facts: [
+          {
+            id: "fact-1",
+            text: "இந்தியாவில் மஞ்சள், வாழைப்பழம் மற்றும் பூக்கள் உற்பத்தியில் தமிழ்நாடு முன்னணி மாநிலங்களில் ஒன்றாகும்."
+          },
+          {
+            id: "fact-2",
+            text: "நீர் சேமிப்பு முறையான சொட்டு நீர் பாசனம், மாநிலத்தில் விரிவாக ஊக்குவிக்கப்பட்டு மானியம் வழங்கப்படுகிறது."
+          },
+          {
+            id: "fact-3",
+            text: "மாநிலம் வெப்பமண்டல காலநிலையை கொண்டுள்ளது, இது ஆண்டு முழுவதும் பயிர்களை பயிரிட அனுமதிக்கிறது."
+          }
+        ]
       },
       schemeHighlight: {
         title: "கவனத்தில் உள்ள திட்டம்: PM-KISAN",

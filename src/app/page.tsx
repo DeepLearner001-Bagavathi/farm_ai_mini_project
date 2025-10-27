@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { CloudSun, BarChart, ScrollText, Bot } from "lucide-react";
+import { CloudSun, BarChart, ScrollText, Bot, Leaf, Droplet, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
@@ -24,6 +24,12 @@ const icons: { [key: string]: React.ReactNode } = {
   market: <BarChart className="w-8 h-8 text-primary" />,
   schemes: <ScrollText className="w-8 h-8 text-primary" />,
   assistant: <Bot className="w-8 h-8 text-primary" />,
+};
+
+const factIcons: { [key: string]: React.ReactNode } = {
+    "fact-1": <Leaf className="w-8 h-8 text-accent" />,
+    "fact-2": <Droplet className="w-8 h-8 text-accent" />,
+    "fact-3": <Sun className="w-8 h-8 text-accent" />,
 };
 
 
@@ -138,6 +144,31 @@ export default function Home() {
                     )}
                 </div>
             </div>
+        </div>
+      </section>
+
+      {/* Facts Section */}
+      <section className="py-12 md:py-20 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline animate-in fade-in slide-in-from-bottom-10 duration-700">{pageContent.factsSection.title}</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pageContent.factsSection.facts.map((fact, i) => (
+                <div key={fact.id} className="animate-in fade-in slide-in-from-bottom-12 duration-700" style={{animationDelay: `${i * 150}ms`}}>
+                    <Card className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+                        <CardHeader className="items-center">
+                            <div className="p-4 bg-secondary rounded-full">
+                                {factIcons[fact.id]}
+                            </div>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground text-lg">{fact.text}</p>
+                        </CardContent>
+                    </Card>
+                </div>
+            ))}
+          </div>
         </div>
       </section>
 
