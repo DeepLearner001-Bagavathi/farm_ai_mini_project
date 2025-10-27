@@ -10,7 +10,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Send, Loader, User, Bot, X, MessageCircle } from "lucide-react";
+import { Send, Loader, User, Bot, X } from "lucide-react";
 import { useState, useRef, useEffect, createContext, useContext, useMemo } from "react";
 import { ScrollArea } from "../ui/scroll-area";
 import { useLanguage } from "@/context/language-context";
@@ -90,6 +90,7 @@ export function Chatbot() {
         className="fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg z-50 transition-transform hover:scale-110"
         onClick={() => setOpen(true)}
       >
+        <Bot className="h-7 w-7" />
         <span className="sr-only">{chatbotContent.open}</span>
       </Button>
       <Dialog open={open} onOpenChange={setOpen}>
