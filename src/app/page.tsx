@@ -28,7 +28,7 @@ const icons: { [key: string]: React.ReactNode } = {
 
 export default function Home() {
   const { language } = useLanguage();
-  const { setOpen: setChatbotOpen } = useChatbot();
+  const { setOpen: setChatbotOpen, setInitialMessage } = useChatbot();
   const pageContent = content[language].homePage;
   const features = pageContent.features;
   const plugin = React.useRef(
@@ -39,6 +39,11 @@ export default function Home() {
   const aboutImage = PlaceHolderImages.find(p => p.id === 'about-us-1');
   const schemeImage = PlaceHolderImages.find(p => p.id === 'scheme-highlight-1');
   const ctaImage = PlaceHolderImages.find(p => p.id === 'cta-1');
+
+  const handleAskAi = (message: string) => {
+    setInitialMessage(message);
+    setChatbotOpen(true);
+  };
   
   return (
     <div className="flex flex-col">
@@ -140,33 +145,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Facts Section */}
+      {/* Know More Section */}
       <section className="py-12 md:py-20 bg-background overflow-hidden">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline animate-in fade-in slide-in-from-bottom-10 duration-700">{pageContent.factsSection.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline animate-in fade-in slide-in-from-bottom-10 duration-700">{pageContent.knowMoreSection.title}</h2>
           </div>
           <div className="space-y-16">
-            {pageContent.factsSection.facts.map((fact, index) => {
-              const factImage = PlaceHolderImages.find(p => p.id === fact.id);
+            {pageContent.knowMoreSection.topics.map((topic, index) => {
+              const topicImage = PlaceHolderImages.find(p => p.id === topic.id);
               const isEven = index % 2 === 0;
               return (
-                <div key={fact.id} className="grid md:grid-cols-2 gap-12 items-center animate-in fade-in slide-in-from-bottom-12 duration-1000">
+                <div key={topic.id} className="grid md:grid-cols-2 gap-12 items-center animate-in fade-in slide-in-from-bottom-12 duration-1000">
                   <div className={`order-1 ${isEven ? 'md:order-1' : 'md:order-2'}`}>
-                    {factImage && (
+                    {topicImage && (
                       <Image
-                        src={factImage.imageUrl}
-                        alt={factImage.description}
+                        src={topicImage.imageUrl}
+                        alt={topicImage.description}
                         width={600}
                         height={400}
                         className="rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
-                        data-ai-hint={factImage.imageHint}
+                        data-ai-hint={topicImage.imageHint}
                       />
                     )}
                   </div>
                   <div className={`order-2 ${isEven ? 'md:order-2' : 'md:order-1'}`}>
-                    <h3 className="text-2xl font-bold font-headline mb-4">{fact.title}</h3>
-                    <p className="text-muted-foreground">{fact.text}</p>
+                    <h3 className="text-2xl font-bold font-headline mb-4">{topic.title}</h3>
+                    <p className="text-muted-foreground mb-6">{topic.text}</p>
+                    <Button 
+                      onClick={() => handleAskAi(topic.aiQuery)} 
+                      className="transition-transform hover:scale-105"
+                    >
+                      <Bot className="w-5 h-5 mr-2" />
+                      {pageContent.knowMoreSection.askAiCta}
+                    </Button>
                   </div>
                 </div>
               );

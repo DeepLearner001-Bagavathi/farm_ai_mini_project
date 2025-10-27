@@ -61,23 +61,27 @@ export const content = {
         p1: "TN Ulavan is a digital platform designed to empower farmers in Tamil Nadu with the latest technology and information. Our goal is to make farming more profitable, sustainable, and efficient.",
         p2: "From real-time weather updates and market prices to detailed information about government schemes, we provide a comprehensive suite of tools to support you at every stage of the farming lifecycle.",
       },
-      factsSection: {
-        title: "Did You Know?",
-        facts: [
+      knowMoreSection: {
+        title: "Know More",
+        askAiCta: "Ask AI",
+        topics: [
           {
             id: "fact-1",
-            title: "Major Producer State",
-            text: "Tamil Nadu is one of the leading producers of turmeric, bananas, and flowers in India, contributing significantly to the nation's agricultural output."
+            title: "Tamil Nadu: A Turmeric Powerhouse",
+            text: "Tamil Nadu is a leading producer of turmeric in India, with Erode being famously known as 'Turmeric City'. The state's climate is ideal for cultivating this 'golden spice', which is not only crucial for Indian cuisine but also has significant medicinal properties recognized worldwide.",
+            aiQuery: "Tell me more about turmeric farming in Tamil Nadu."
           },
           {
             id: "fact-2",
-            title: "Water-Saving Innovation",
-            text: "Drip irrigation, a modern water-saving method, is extensively promoted and subsidized by the government in Tamil Nadu to combat water scarcity and improve crop yields."
+            title: "Innovative Water Management: Drip Irrigation",
+            text: "To combat water scarcity, Tamil Nadu widely promotes drip irrigation. This micro-irrigation technique saves water and fertilizer by allowing water to drip slowly to the roots of plants, either from above the soil surface or buried below the surface. This method is crucial for sustainable agriculture in the state.",
+            aiQuery: "How can I get subsidies for drip irrigation in Tamil Nadu?"
           },
           {
             id: "fact-3",
-            title: "Year-Round Cultivation",
-            text: "Thanks to its tropical climate, Tamil Nadu enjoys favorable conditions that allow for the cultivation of a diverse range of crops throughout the entire year."
+            title: "The Advantage of a Tropical Climate",
+            text: "Thanks to its tropical climate, Tamil Nadu can cultivate a wide array of crops throughout the year, from paddy, millets, and pulses to sugarcane, cotton, and various fruits and vegetables. This diversity ensures a steady supply of agricultural produce and supports the livelihoods of millions of farmers.",
+            aiQuery: "What are the most profitable crops to grow year-round in Tamil Nadu?"
           }
         ]
       },
@@ -244,23 +248,27 @@ export const content = {
         p1: "TN உழவன் என்பது தமிழ்நாட்டு விவசாயிகளுக்கு சமீபத்திய தொழில்நுட்பம் மற்றும் தகவல்களுடன் அதிகாரம் அளிக்க வடிவமைக்கப்பட்ட ஒரு டிஜிட்டல் தளமாகும். விவசாயத்தை அதிக லாபகரமானதாகவும், நிலையானதாகவும், திறமையாகவும் மாற்றுவதே எங்கள் குறிக்கோள்.",
         p2: "நிகழ்நேர வானிலை அறிவிப்புகள் மற்றும் சந்தை விலைகள் முதல் அரசாங்க திட்டங்கள் பற்றிய விரிவான தகவல்கள் வரை, விவசாய வாழ்க்கைச் சுழற்சியின் ஒவ்வொரு கட்டத்திலும் உங்களை ஆதரிக்க ஒரு விரிவான கருவிகளை நாங்கள் வழங்குகிறோம்.",
       },
-      factsSection: {
-        title: "உங்களுக்குத் தெரியுமா?",
-        facts: [
+      knowMoreSection: {
+        title: "மேலும் அறிக",
+        askAiCta: "AI இடம் கேளுங்கள்",
+        topics: [
           {
             id: "fact-1",
-            title: "முக்கிய உற்பத்தியாளர் மாநிலம்",
-            text: "இந்தியாவின் மஞ்சள், வாழைப்பழங்கள் மற்றும் பூக்கள் உற்பத்தியில் தமிழ்நாடு முன்னணி மாநிலங்களில் ஒன்றாக உள்ளது, இது நாட்டின் விவசாய உற்பத்திக்கு குறிப்பிடத்தக்க பங்களிப்பை அளிக்கிறது."
+            title: "தமிழ்நாடு: ஒரு மஞ்சள் சக்தி நிலையம்",
+            text: "ஈரோடு 'மஞ்சள் நகரம்' என்று பிரபலமாக அறியப்படுவதால், தமிழ்நாடு இந்தியாவில் மஞ்சள் உற்பத்தியில் முன்னணியில் உள்ளது. இந்த 'தங்க மசாலா' பயிரிடுவதற்கு மாநிலத்தின் காலநிலை மிகவும் ஏற்றது, இது இந்திய உணவு வகைகளுக்கு முக்கியமானது மட்டுமல்லாமல், உலகளவில் அங்கீகரிக்கப்பட்ட குறிப்பிடத்தக்க மருத்துவ குணங்களையும் கொண்டுள்ளது.",
+            aiQuery: "தமிழ்நாட்டில் மஞ்சள் விவசாயம் பற்றி மேலும் சொல்லுங்கள்."
           },
           {
             id: "fact-2",
-            title: "நீர் சேமிப்பு கண்டுபிடிப்பு",
-            text: "தண்ணீர் பற்றாக்குறையை எதிர்த்துப் போராடுவதற்கும் பயிர் விளைச்சலை மேம்படுத்துவதற்கும், ஒரு நவீன நீர் சேமிப்பு முறையான சொட்டு நீர் பாசனம், தமிழ்நாட்டில் அரசாங்கத்தால் விரிவாக ஊக்குவிக்கப்பட்டு மானியம் வழங்கப்படுகிறது."
+            title: "புதுமையான நீர் மேலாண்மை: சொட்டு நீர் பாசனம்",
+            text: "நீர் பற்றாக்குறையை எதிர்த்துப் போராட, தமிழ்நாடு சொட்டு நீர் பாசனத்தை பரவலாக ஊக்குவிக்கிறது. இந்த நுண்-நீர்ப்பாசன நுட்பம், தாவரங்களின் வேர்களுக்கு மெதுவாக நீர் சொட்ட அனுமதிப்பதன் மூலம் நீரையும் உரத்தையும் சேமிக்கிறது. மாநிலத்தின் நிலையான விவசாயத்திற்கு இந்த முறை மிகவும் முக்கியமானது.",
+            aiQuery: "தமிழ்நாட்டில் சொட்டு நீர் பாசனத்திற்கு மானியம் பெறுவது எப்படி?"
           },
           {
             id: "fact-3",
-            title: "ஆண்டு முழுவதும் சாகுபடி",
-            text: "அதன் வெப்பமண்டல காலநிலைக்கு நன்றி, தமிழ்நாடு ஆண்டு முழுவதும் பல்வேறு வகையான பயிர்களை பயிரிடுவதற்கு சாதகமான நிலைமைகளைக் கொண்டுள்ளது."
+            title: "ஒரு வெப்பமண்டல காலநிலையின் நன்மை",
+            text: "அதன் வெப்பமண்டல காலநிலைக்கு நன்றி, தமிழ்நாடு ஆண்டு முழுவதும் நெல், தினை, பருப்பு வகைகள் முதல் கரும்பு, பருத்தி மற்றும் பல்வேறு பழங்கள் மற்றும் காய்கறிகள் வரை பரந்த அளவிலான பயிர்களை பயிரிட முடியும். இந்த பன்முகத்தன்மை விவசாய ఉత్పత్తుల స్థిరమైన సరఫరాను నిర్ధారిస్తుంది మరియు లక్షలాది రైతుల జీవనోపాధికి మద్దతు ఇస్తుంది.",
+            aiQuery: "தமிழ்நாட்டில் ஆண்டு முழுவதும் பயிரிட மிகவும் லாभகரமான பயிர்கள் யாவை?"
           }
         ]
       },
@@ -326,7 +334,7 @@ export const content = {
             },
             {
               title: "தேசிய வேளாண் சந்தை (e-NAM)",
-              content: "வேளாண் பொருட்களுக்கான ஒருங்கிணைந்த தேசிய சந்தையை உருவாக்க தற்போதுள்ள APMC மண்டிகளை இணைக்கும் ஒரு பான்-இந்தியா மின்னணு வர்த்தக போர்டல். இது ஒரு வெளிப்படையான ஏல செயல்முறை மூலம் சிறந்த விலை கண்டுபிடிப்பை வழங்குகிறது.",
+              content: "வேளாண் பொருட்களுக்கான ஒருங்கிணைந்த தேசிய சந்தையை உருவாக்க தற்போதுள்ள APMC மண்டிகளை இணைக்கும் ஒரு பான்-இந்தியா மின்னணு வர்த்தக போர்டல். ఇది ഒരു வெளிப்படையான ஏல செயல்முறை மூலம் சிறந்த விலை கண்டுபிடிப்பை வழங்குகிறது.",
             },
             {
               title: "தமிழ்நாடு முதலமைச்சரின் உழவர் பாதுகாப்புத் திட்டம்",

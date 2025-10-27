@@ -24,6 +24,7 @@ type Message = {
 type ChatbotContextType = {
   open: boolean;
   setOpen: (open: boolean) => void;
+  setInitialMessage: (message: string) => void;
 };
 
 const ChatbotContext = createContext<ChatbotContextType | null>(null);
@@ -38,16 +39,31 @@ export const useChatbot = () => {
 
 export function ChatbotProvider({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
-  const contextValue = useMemo(() => ({ open, setOpen }), [open, setOpen]);
+  const [initialMessage, setInitialMessage] = useState<string>("");
+
+  const contextValue = useMemo(() => ({ 
+      open, 
+      setOpen, 
+      setInitialMessage: (message: string) => {
+        setInitialMessage(message);
+        setOpen(true);
+      }
+    }), [open, setOpen]);
+
   return (
     <ChatbotContext.Provider value={contextValue}>
+      <Chatbot initialMessage={initialMessage} setInitialMessage={setInitialMessage} />
       {children}
     </ChatbotContext.Provider>
   );
 }
 
+type ChatbotProps = {
+    initialMessage: string;
+    setInitialMessage: (message: string) => void;
+};
 
-export function Chatbot() {
+export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
   const { open, setOpen } = useChatbot();
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -55,6 +71,13 @@ export function Chatbot() {
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const { language } = useLanguage();
   const chatbotContent = content[language].chatbot;
+
+  useEffect(() => {
+    if (initialMessage) {
+      setInput(initialMessage);
+      setInitialMessage(""); // Clear after setting
+    }
+  }, [initialMessage, setInitialMessage]);
 
   useEffect(() => {
     if (scrollAreaRef.current) {

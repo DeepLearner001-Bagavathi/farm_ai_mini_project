@@ -1,9 +1,10 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
-import { Chatbot, ChatbotProvider } from '@/components/ai/Chatbot';
+import { ChatbotProvider } from '@/components/ai/Chatbot';
 import { LanguageProvider } from '@/context/language-context';
 
 export const metadata: Metadata = {
@@ -38,7 +39,6 @@ function RootContent({ children }: { children: React.ReactNode }) {
         <main className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
-        <Chatbot />
       </body>
     </html>
   );
