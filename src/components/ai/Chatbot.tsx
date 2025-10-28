@@ -113,28 +113,28 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
             const schemeImage = PlaceHolderImages.find(p => p.id === 'scheme-highlight-1');
             botMessage = {
                 role: "model",
-                content: "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a central government scheme that provides income support of ₹6,000 per year to all landholding farmer families. This financial aid is disbursed in three equal installments of ₹2,000 every four months directly into their bank accounts. The scheme aims to supplement the financial needs of farmers in procuring various inputs to ensure proper crop health and appropriate yields, as well as for domestic needs.",
+                content: "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a central government scheme designed to provide direct income support to all landholding farmer families across India. The primary objective is to supplement the financial needs of Small and Marginal Farmers in procuring various inputs to ensure proper crop health and appropriate yields, commensurate with the anticipated farm income as well as for domestic needs. The scheme provides a payment of ₹6,000 per year, disbursed in three equal four-monthly installments of ₹2,000 each. This amount is transferred directly into the bank accounts of the beneficiaries through the Direct Benefit Transfer (DBT) mode, ensuring transparency and reducing leakages. All landholding farmer families, who have cultivable landholding in their names, are eligible to get benefits under the scheme. The definition of 'family' for the scheme is husband, wife, and minor children. The responsibility of identifying the eligible farmer families and uploading their data on the PM-KISAN portal rests with the State/UT Governments. Farmers can self-register through the Farmers Corner in the portal or through Common Service Centers (CSCs).",
                 imageUrl: schemeImage?.imageUrl
             }
         } else if (messageText.includes(dripIrrigationSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[1].substring(0,10))) {
             const dripImage = PlaceHolderImages.find(p => p.id === 'fact-2');
             botMessage = {
                 role: "model",
-                content: "Drip irrigation is a highly efficient micro-irrigation method that saves water and fertilizers by allowing water to drip slowly to the roots of plants, either from above the soil surface or buried below the surface. The goal is to place water directly into the root zone and minimize evaporation. In Tamil Nadu, the government provides significant subsidies to encourage its adoption, making it a key strategy for sustainable agriculture in water-scarce areas.",
+                content: "Drip irrigation is a highly efficient micro-irrigation method that revolutionizes water and nutrient management for crops. By allowing water to drip slowly and directly to the roots of plants, either from above the soil surface or buried below it, this system minimizes water loss through evaporation and runoff. It can achieve water savings of up to 70% compared to traditional flood irrigation. In Tamil Nadu, a state that often faces water scarcity, this is particularly crucial. The government actively promotes its adoption through the Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), which aims to extend irrigation coverage ('Har Khet Ko Pani') and improve water use efficiency ('More Crop Per Drop'). Under this scheme, farmers can receive significant subsidies—often up to 90% for small and marginal farmers—on the cost of installing drip irrigation systems. This makes it a financially viable and sustainable solution for cultivating water-intensive crops like sugarcane, bananas, grapes, and various vegetables, leading to increased yields, better crop quality, and conservation of precious water resources.",
                 imageUrl: dripImage?.imageUrl
             }
         } else if (messageText.includes(turmericPriceSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[2].substring(0,10))) {
             const turmericImage = PlaceHolderImages.find(p => p.id === 'fact-1');
             botMessage = {
                 role: "model",
-                content: "The current market price for high-quality turmeric in the Erode market is approximately ₹17,500 per quintal. Prices can vary based on factors like grade, moisture content, and demand from both domestic and international buyers. Erode is one of the largest turmeric trading centers in the world, often setting the price benchmark for the spice.",
+                content: "The turmeric market in Erode, known as 'Turmeric City', is one of the largest and most influential trading hubs for turmeric in the world, significantly impacting prices both domestically and internationally. The current market price for high-quality, 'bulb' variety turmeric in the Erode market is approximately ₹17,500 per quintal. However, prices are highly dynamic and fluctuate based on several factors. Key determinants include the grade of the turmeric (quality, color, and curcumin content), moisture levels (lower is better), and daily arrivals at the market. Furthermore, market sentiment, demand from North Indian states, export orders, and festive seasons can all cause prices to vary. For farmers, it's crucial to track daily prices from reliable sources like the Erode Turmeric Merchants Association or government agricultural marketing committees. By staying informed about these price trends and the factors influencing them, farmers can make better decisions on when to sell their produce to maximize their profits.",
                 imageUrl: turmericImage?.imageUrl
             }
         } else if (messageText.toLowerCase().includes('weather') || messageText.includes('வானிலை')) {
             const weatherImage = PlaceHolderImages.find(p => p.id === 'about-us-1');
             botMessage = {
                 role: "model",
-                content: "For the upcoming week in most parts of Tamil Nadu, the weather is expected to be partly cloudy with scattered showers. The maximum temperature will hover around 31-33°C, while the minimum temperature will be around 25-27°C. Humidity levels will remain relatively high, especially after rainfall. It's advisable to plan farming activities accordingly and protect crops from heavy downpours if forecasted.",
+                content: "For the upcoming week, most districts in Tamil Nadu can expect a mix of weather conditions, typical for this time of year. The forecast indicates partly cloudy skies with scattered thundershowers, especially during the afternoon and evening hours. The maximum temperature will generally range from 31°C to 33°C, while minimum temperatures are expected to be between 25°C and 27°C. Humidity levels will remain relatively high, often exceeding 75-80%, particularly after rainfall, which can increase the risk of fungal diseases for certain crops. Farmers are advised to plan their activities accordingly. It's a good time for land preparation and sowing for rain-fed crops. However, it's important to ensure proper drainage in fields to prevent waterlogging during heavy downpours. It would be wise to postpone pesticide or fertilizer application if heavy rain is forecasted to avoid it being washed away. Always protect newly harvested produce from potential rain.",
                 imageUrl: weatherImage?.imageUrl
             }
         }
@@ -270,5 +270,3 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
     </>
   );
 }
-
-    
