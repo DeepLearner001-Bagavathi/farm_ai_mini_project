@@ -140,7 +140,7 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
                 {messages.length === 0 && !loading ? (
                     <div className="flex flex-col items-center justify-center h-full text-center p-8 animate-in fade-in slide-in-from-bottom-10 duration-500">
                         <div className="p-4 bg-secondary rounded-full mb-4">
-                            <Bot className="w-10 h-10 text-primary" />
+                            <Bot className="w-10 h-10 text-primary animate-pulse" />
                         </div>
                         <h2 className="text-2xl font-bold font-headline mb-2">{chatbotContent.welcomeTitle}</h2>
                         <p className="text-muted-foreground mb-8">{chatbotContent.welcomeMessage}</p>
