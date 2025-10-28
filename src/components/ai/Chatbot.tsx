@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -147,7 +146,7 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
                         <p className="text-muted-foreground mb-8">{chatbotContent.welcomeMessage}</p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-md">
                             {chatbotContent.suggestions.map((suggestion, index) => (
-                                <Button key={index} variant="outline" onClick={() => handleSuggestionClick(suggestion)}>
+                                <Button key={index} variant="outline" onClick={() => handleSuggestionClick(suggestion)} className="transition-transform hover:scale-105">
                                     {suggestion}
                                 </Button>
                             ))}
