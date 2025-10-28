@@ -16,6 +16,7 @@ import { ScrollArea } from "../ui/scroll-area";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
 import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 type Message = {
   role: "user" | "model";
@@ -99,11 +100,45 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
 
     // Simulate a delay for the bot's response
     setTimeout(() => {
-        const botMessage: Message = { 
+        let botMessage: Message = { 
             role: "model", 
-            content: "Of course! Turmeric is a key crop in Tamil Nadu. Here's a picture of a turmeric field. You should ensure proper irrigation for a healthy yield.",
-            imageUrl: "https://images.unsplash.com/photo-1666818398897-381dd5eb9139?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1174"
+            content: "Sorry, I can only provide information on the suggested topics for now.",
         };
+
+        const pmKisanSuggestion = content.en.chatbot.suggestions[0];
+        const dripIrrigationSuggestion = content.en.chatbot.suggestions[1];
+        const turmericPriceSuggestion = content.en.chatbot.suggestions[2];
+
+        if (messageText.includes(pmKisanSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[0].substring(0,10))) {
+            const schemeImage = PlaceHolderImages.find(p => p.id === 'scheme-highlight-1');
+            botMessage = {
+                role: "model",
+                content: "PM-KISAN is a central government scheme providing income support of ₹6,000 per year to all landholding farmer families to help them with their agricultural and domestic needs.",
+                imageUrl: schemeImage?.imageUrl
+            }
+        } else if (messageText.includes(dripIrrigationSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[1].substring(0,10))) {
+            const dripImage = PlaceHolderImages.find(p => p.id === 'fact-2');
+            botMessage = {
+                role: "model",
+                content: "Drip irrigation is a micro-irrigation system that saves water and nutrients by allowing water to drip slowly to the roots of plants. It is highly promoted in Tamil Nadu to combat water scarcity.",
+                imageUrl: dripImage?.imageUrl
+            }
+        } else if (messageText.includes(turmericPriceSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[2].substring(0,10))) {
+            const turmericImage = PlaceHolderImages.find(p => p.id === 'fact-1');
+            botMessage = {
+                role: "model",
+                content: "The latest market price for Turmeric in Erode is approximately ₹17,500 per quintal. Prices can fluctuate based on quality and market demand.",
+                imageUrl: turmericImage?.imageUrl
+            }
+        } else if (messageText.toLowerCase().includes('weather') || messageText.includes('வானிலை')) {
+            const weatherImage = PlaceHolderImages.find(p => p.id === 'about-us-1');
+            botMessage = {
+                role: "model",
+                content: "The weather for the next few days in Tamil Nadu is expected to be partly cloudy with a chance of light showers. The average temperature will be around 31°C.",
+                imageUrl: weatherImage?.imageUrl
+            }
+        }
+
         setMessages((prev) => [...prev, botMessage]);
         setLoading(false);
     }, 1000);
@@ -235,3 +270,5 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
     </>
   );
 }
+
+    
