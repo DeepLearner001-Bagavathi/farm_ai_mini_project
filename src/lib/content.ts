@@ -68,19 +68,19 @@ export const content = {
           {
             id: "fact-1",
             title: "Tamil Nadu: A Turmeric Powerhouse",
-            text: "Tamil Nadu is a leading producer of turmeric in India, with Erode being famously known as 'Turmeric City'. The state's climate is ideal for cultivating this 'golden spice', which is not only crucial for Indian cuisine but also has significant medicinal properties recognized worldwide.",
+            text: "Tamil Nadu is one of the leading producers of turmeric in India, with Erode famously known as 'Turmeric City.' The state's warm, humid climate and well-drained loamy soils create the perfect conditions for this 'golden spice.' Beyond its use in cuisine, the high curcumin content in Tamil Nadu's turmeric makes it highly sought after for its medicinal properties, including anti-inflammatory and antioxidant benefits. This robust cultivation supports a major agricultural export market, contributing significantly to the state's economy.",
             aiQuery: "Tell me more about turmeric farming in Tamil Nadu."
           },
           {
             id: "fact-2",
             title: "Innovative Water Management: Drip Irrigation",
-            text: "To combat water scarcity, Tamil Nadu widely promotes drip irrigation. This micro-irrigation technique saves water and fertilizer by allowing water to drip slowly to the roots of plants, either from above the soil surface or buried below the surface. This method is crucial for sustainable agriculture in the state.",
+            text: "To combat water scarcity and improve crop yields, Tamil Nadu has become a pioneer in promoting drip irrigation. This micro-irrigation system delivers water directly to the plant's root zone, minimizing evaporation and runoff, which can lead to water savings of up to 70%. The state government provides significant subsidies to encourage farmers to adopt this technology, making it crucial for the sustainable cultivation of water-intensive crops like sugarcane and bananas, especially in the drier regions of the state.",
             aiQuery: "How can I get subsidies for drip irrigation in Tamil Nadu?"
           },
           {
             id: "fact-3",
             title: "The Advantage of a Tropical Climate",
-            text: "Thanks to its tropical climate, Tamil Nadu can cultivate a wide array of crops throughout the year, from paddy, millets, and pulses to sugarcane, cotton, and various fruits and vegetables. This diversity ensures a steady supply of agricultural produce and supports the livelihoods of millions of farmers.",
+            text: "Thanks to its diverse agro-climatic zones, Tamil Nadu can cultivate a wide array of crops throughout the year. The state is divided into seven distinct agro-climatic zones, from the high-rainfall coastal areas to the cooler hilly regions. This allows for the cultivation of everything from paddy, millets, and pulses in the plains to tea, coffee, and spices in the hills. This agricultural diversity not only ensures food security but also supports a vibrant and resilient farming economy, allowing farmers to adapt their crops to changing market and climate conditions.",
             aiQuery: "What are the most profitable crops to grow year-round in Tamil Nadu?"
           }
         ]
@@ -263,20 +263,20 @@ export const content = {
           {
             id: "fact-1",
             title: "தமிழ்நாடு: ஒரு மஞ்சள் சக்தி நிலையம்",
-            text: "ஈரோடு 'மஞ்சள் நகரம்' என்று பிரபலமாக அறியப்படுவதால், தமிழ்நாடு இந்தியாவில் மஞ்சள் உற்பத்தியில் முன்னணியில் உள்ளது. இந்த 'தங்க மசாலா' பயிரிடுவதற்கு மாநிலத்தின் காலநிலை மிகவும் ஏற்றது, இது இந்திய உணவு வகைகளுக்கு முக்கியமானது மட்டுமல்லாமல், உலகளவில் அங்கீகரிக்கப்பட்ட குறிப்பிடத்தக்க மருத்துவ குணங்களையும் கொண்டுள்ளது.",
+            text: "ஈரோடு 'மஞ்சள் நகரம்' என்று பிரபலமாக அறியப்படுவதால், தமிழ்நாடு இந்தியாவில் மஞ்சள் உற்பத்தியில் முன்னணி மாநிலங்களில் ஒன்றாகும். மாநிலத்தின் வெப்பமான, ஈரப்பதமான காலநிலை மற்றும் நன்கு வடிகட்டிய வண்டல் மண் இந்த 'தங்க மசாலா' பயிரிட சரியான நிலைமைகளை உருவாக்குகின்றன. உணவில் பயன்படுத்துவதைத் தவிர, தமிழ்நாட்டின் மஞ்சளில் உள்ள அதிக குர்குமின் உள்ளடக்கம், அதன் அழற்சி எதிர்ப்பு மற்றும் ஆக்ஸிஜனேற்ற நன்மைகள் உள்ளிட்ட மருத்துவ குணங்களுக்காக மிகவும் விரும்பப்படுகிறது. இந்த வலுவான சாகுபடி ஒரு முக்கிய விவசாய ஏற்றுமதி சந்தையை ஆதரிக்கிறது, இது மாநிலத்தின் பொருளாதாரத்திற்கு குறிப்பிடத்தக்க பங்களிப்பை அளிக்கிறது.",
             aiQuery: "தமிழ்நாட்டில் மஞ்சள் விவசாயம் பற்றி மேலும் சொல்லுங்கள்."
           },
           {
             id: "fact-2",
             title: "புதுமையான நீர் மேலாண்மை: சொட்டு நீர் பாசனம்",
-            text: "நீர் பற்றாக்குறையை எதிர்த்துப் போராட, தமிழ்நாடு சொட்டு நீர் பாசனத்தை பரவலாக ஊக்குவிக்கிறது. இந்த நுண்-நீர்ப்பாசன நுட்பம், தாவரங்களின் வேர்களுக்கு மெதுவாக நீர் சொட்ட அனுமதிப்பதன் மூலம் நீரையும் உரத்தையும் சேமிக்கிறது. மாநிலத்தின் நிலையான விவசாயத்திற்கு இந்த முறை மிகவும் முக்கியமானது.",
+            text: "நீர் பற்றாக்குறையை எதிர்த்துப் போராடவும், பயிர் விளைச்சலை மேம்படுத்தவும், தமிழ்நாடு சொட்டு நீர் பாசனத்தை ஊக்குவிப்பதில் ஒரு முன்னோடியாக மாறியுள்ளது. இந்த நுண்-நீர்ப்பாசன அமைப்பு, தாவரத்தின் வேர் பகுதிக்கு நேரடியாக நீரைக் கொண்டு செல்கிறது, ஆவியாதல் மற்றும் வழிந்தோடும் நீரை குறைக்கிறது, இது 70% வரை நீர் சேமிப்புக்கு வழிவகுக்கும். மாநில அரசு இந்த தொழில்நுட்பத்தை விவசாயிகள் பின்பற்ற ஊக்குவிக்க குறிப்பிடத்தக்க மானியங்களை வழங்குகிறது, இது கரும்பு மற்றும் வாழை போன்ற அதிக நீர் தேவைப்படும் பயிர்களை மாநிலத்தின் வறண்ட பகுதிகளில் நிலையான முறையில் சாகுபடி செய்ய முக்கியமானதாகிறது.",
             aiQuery: "தமிழ்நாட்டில் சொட்டு நீர் பாசனத்திற்கு மானியம் பெறுவது எப்படி?"
           },
           {
             id: "fact-3",
             title: "ஒரு வெப்பமண்டல காலநிலையின் நன்மை",
-            text: "அதன் வெப்பமண்டல காலநிலைக்கு நன்றி, தமிழ்நாடு ஆண்டு முழுவதும் நெல், தினை, பருப்பு வகைகள் முதல் கரும்பு, பருத்தி மற்றும் பல்வேறு பழங்கள் மற்றும் காய்கறிகள் வரை பரந்த அளவிலான பயிர்களை பயிரிட முடியும். இந்த பன்முகத்தன்மை விவசாய ఉత్పత్తుల స్థిరమైన సరఫరాను నిర్ధారిస్తుంది మరియు లక్షలాది రైతుల జీవనోపాధికి మద్దతు ఇస్తుంది.",
-            aiQuery: "தமிழ்நாட்டில் ஆண்டு முழுவதும் பயிரிட மிகவும் லாभகரமான பயிர்கள் யாவை?"
+            text: "அதன் மாறுபட்ட வேளாண்-காலநிலை மண்டலங்களுக்கு நன்றி, தமிழ்நாடு ஆண்டு முழுவதும் பலவிதமான பயிர்களைப் பயிரிட முடியும். மாநிலம் ஏழு தனித்துவமான வேளாண்-காலநிலை மண்டலங்களாகப் பிரிக்கப்பட்டுள்ளது, அதிக மழைப்பொழிவுள்ள கடலோரப் பகுதிகள் முதல் குளிரான மலைப்பகுதிகள் வரை. இது சமவெளிகளில் நெல், தினை, மற்றும் பருப்பு வகைகள் முதல் மலைகளில் தேயிலை, காபி மற்றும் மசாலாப் பொருட்கள் வரை அனைத்தையும் பயிரிட அனுமதிக்கிறது. இந்த விவசாயப் பன்முகத்தன்மை உணவுப் பாதுகாப்பை உறுதி செய்வதோடு மட்டுமல்லாமல், ஒரு துடிப்பான மற்றும் நெகிழ்ச்சியான விவசாயப் பொருளாதாரத்தையும் ஆதரிக்கிறது, இது விவசாயிகள் மாறிவரும் சந்தை மற்றும் காலநிலை நிலைமைகளுக்கு ஏற்ப தங்கள் பயிர்களை மாற்றியமைக்க அனுமதிக்கிறது.",
+            aiQuery: "தமிழ்நாட்டில் ஆண்டு முழுவதும் பயிரிட மிகவும் லாபகரமான பயிர்கள் யாவை?"
           }
         ]
       },
