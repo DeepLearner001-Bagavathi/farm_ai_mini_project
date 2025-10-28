@@ -139,7 +139,7 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
             <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
               <div className="space-y-4 max-w-4xl mx-auto w-full">
                 {messages.length === 0 && !loading ? (
-                    <div className="flex flex-col items-center justify-center h-full text-center p-8">
+                    <div className="flex flex-col items-center justify-center h-full text-center p-8 animate-in fade-in slide-in-from-bottom-10 duration-500">
                         <div className="p-4 bg-secondary rounded-full mb-4">
                             <Bot className="w-10 h-10 text-primary" />
                         </div>
