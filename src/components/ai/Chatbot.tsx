@@ -113,28 +113,28 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
             const schemeImage = PlaceHolderImages.find(p => p.id === 'scheme-highlight-1');
             botMessage = {
                 role: "model",
-                content: "PM-KISAN is a central government scheme providing income support of ₹6,000 per year to all landholding farmer families to help them with their agricultural and domestic needs.",
+                content: "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a central government scheme that provides income support of ₹6,000 per year to all landholding farmer families. This financial aid is disbursed in three equal installments of ₹2,000 every four months directly into their bank accounts. The scheme aims to supplement the financial needs of farmers in procuring various inputs to ensure proper crop health and appropriate yields, as well as for domestic needs.",
                 imageUrl: schemeImage?.imageUrl
             }
         } else if (messageText.includes(dripIrrigationSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[1].substring(0,10))) {
             const dripImage = PlaceHolderImages.find(p => p.id === 'fact-2');
             botMessage = {
                 role: "model",
-                content: "Drip irrigation is a micro-irrigation system that saves water and nutrients by allowing water to drip slowly to the roots of plants. It is highly promoted in Tamil Nadu to combat water scarcity.",
+                content: "Drip irrigation is a highly efficient micro-irrigation method that saves water and fertilizers by allowing water to drip slowly to the roots of plants, either from above the soil surface or buried below the surface. The goal is to place water directly into the root zone and minimize evaporation. In Tamil Nadu, the government provides significant subsidies to encourage its adoption, making it a key strategy for sustainable agriculture in water-scarce areas.",
                 imageUrl: dripImage?.imageUrl
             }
         } else if (messageText.includes(turmericPriceSuggestion.substring(0,10)) || messageText.includes(content.ta.chatbot.suggestions[2].substring(0,10))) {
             const turmericImage = PlaceHolderImages.find(p => p.id === 'fact-1');
             botMessage = {
                 role: "model",
-                content: "The latest market price for Turmeric in Erode is approximately ₹17,500 per quintal. Prices can fluctuate based on quality and market demand.",
+                content: "The current market price for high-quality turmeric in the Erode market is approximately ₹17,500 per quintal. Prices can vary based on factors like grade, moisture content, and demand from both domestic and international buyers. Erode is one of the largest turmeric trading centers in the world, often setting the price benchmark for the spice.",
                 imageUrl: turmericImage?.imageUrl
             }
         } else if (messageText.toLowerCase().includes('weather') || messageText.includes('வானிலை')) {
             const weatherImage = PlaceHolderImages.find(p => p.id === 'about-us-1');
             botMessage = {
                 role: "model",
-                content: "The weather for the next few days in Tamil Nadu is expected to be partly cloudy with a chance of light showers. The average temperature will be around 31°C.",
+                content: "For the upcoming week in most parts of Tamil Nadu, the weather is expected to be partly cloudy with scattered showers. The maximum temperature will hover around 31-33°C, while the minimum temperature will be around 25-27°C. Humidity levels will remain relatively high, especially after rainfall. It's advisable to plan farming activities accordingly and protect crops from heavy downpours if forecasted.",
                 imageUrl: weatherImage?.imageUrl
             }
         }
