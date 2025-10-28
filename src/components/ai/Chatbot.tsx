@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -14,10 +15,12 @@ import { useState, useRef, useEffect, createContext, useContext, useMemo } from 
 import { ScrollArea } from "../ui/scroll-area";
 import { useLanguage } from "@/context/language-context";
 import { content } from "@/lib/content";
+import Image from "next/image";
 
 type Message = {
   role: "user" | "model";
   content: string;
+  imageUrl?: string;
 };
 
 type ChatbotContextType = {
@@ -96,10 +99,14 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
 
     // Simulate a delay for the bot's response
     setTimeout(() => {
-        const botMessage: Message = { role: "model", content: "I am your AI assistant." };
+        const botMessage: Message = { 
+            role: "model", 
+            content: "Of course! Turmeric is a key crop in Tamil Nadu. Here's a picture of a turmeric field. You should ensure proper irrigation for a healthy yield.",
+            imageUrl: "https://images.unsplash.com/photo-1666818398897-381dd5eb9139?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1174"
+        };
         setMessages((prev) => [...prev, botMessage]);
         setLoading(false);
-    }, 500);
+    }, 1000);
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -172,7 +179,12 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
                             : "bg-muted"
                         }`}
                         >
-                        <p className="text-sm">{message.content}</p>
+                            {message.imageUrl && (
+                                <div className="mb-2">
+                                    <Image src={message.imageUrl} alt="Chatbot image" width={300} height={200} className="rounded-md" />
+                                </div>
+                            )}
+                            <p className="text-sm">{message.content}</p>
                         </div>
                         {message.role === "user" && (
                         <div className="p-2 bg-secondary rounded-full">
