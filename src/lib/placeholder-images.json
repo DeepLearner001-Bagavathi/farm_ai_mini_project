@@ -27,7 +27,7 @@
     {
       "id": "fact-1",
       "description": "A vibrant field of turmeric plants with lush green leaves.",
-      "imageUrl": "https://images.unsplash.com/photo-1626078239602-a16d3a48577a?q=80&w=1974&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1666818398897-381dd5eb9139?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1174",
       "imageHint": "turmeric field"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "fact-3",
       "description": "A beautiful sunrise over a vast agricultural landscape in Tamil Nadu.",
-      "imageUrl": "https://images.unsplash.com/photo-1558236109-54f85cd962f0?q=80&w=2070&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1736732498367-665421409764?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
       "imageHint": "farm sunrise"
     }
   ]

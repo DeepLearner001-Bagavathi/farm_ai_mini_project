@@ -184,7 +184,15 @@ export const content = {
       placeholder: "Ask anything about farming in Tamil Nadu...",
       send: "Send",
       open: "Open AI Chat",
-      error: "Sorry, an error occurred. Please try again."
+      error: "Sorry, an error occurred. Please try again.",
+      welcomeTitle: "How can I help you?",
+      welcomeMessage: "I can answer your questions about farming in Tamil Nadu. Here are some suggestions:",
+      suggestions: [
+        "What is PM-KISAN?",
+        "Tell me about drip irrigation",
+        "Latest price of Turmeric in Erode",
+        "Weather forecast for this week"
+      ]
     }
   },
   ta: {
@@ -334,7 +342,7 @@ export const content = {
             },
             {
               title: "தேசிய வேளாண் சந்தை (e-NAM)",
-              content: "வேளாண் பொருட்களுக்கான ஒருங்கிணைந்த தேசிய சந்தையை உருவாக்க தற்போதுள்ள APMC மண்டிகளை இணைக்கும் ஒரு பான்-இந்தியா மின்னணு வர்த்தக போர்டல். ఇది ഒരു வெளிப்படையான ஏல செயல்முறை மூலம் சிறந்த விலை கண்டுபிடிப்பை வழங்குகிறது.",
+              content: "வேளாண் பொருட்களுக்கான ஒருங்கிணைந்த தேசிய சந்தையை உருவாக்க தற்போதுள்ள APMC மண்டிகளை இணைக்கும் ஒரு பான்-இந்தியா மின்னணு வர்த்தக போர்டல். ఇది ஒரு வெளிப்படையான ஏல செயல்முறை மூலம் சிறந்த விலை கண்டுபிடிப்பை வழங்குகிறது.",
             },
             {
               title: "தமிழ்நாடு முதலமைச்சரின் உழவர் பாதுகாப்புத் திட்டம்",
@@ -371,7 +379,15 @@ export const content = {
       placeholder: "தமிழ்நாட்டில் விவசாயம் பற்றி எதையும் கேளுங்கள்...",
       send: "அனுப்பு",
       open: "AI அரட்டையைத் திற",
-      error: "மன்னிக்கவும், ஒரு பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்."
+      error: "மன்னிக்கவும், ஒரு பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.",
+      welcomeTitle: "நான் உங்களுக்கு எப்படி உதவ முடியும்?",
+      welcomeMessage: "தமிழ்நாட்டில் விவசாயம் குறித்த உங்கள் கேள்விகளுக்கு நான் பதிலளிக்க முடியும். இங்கே சில பரிந்துரைகள்:",
+      suggestions: [
+        "PM-KISAN என்றால் என்ன?",
+        "சொட்டு நீர் பாசனம் பற்றி சொல்லுங்கள்",
+        "ஈரோட்டில் மஞ்சளின் சமீபத்திய விலை",
+        "இந்த வார வானிலை முன்னறிவிப்பு"
+      ]
     }
   },
 };

@@ -10,7 +10,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Send, Loader, User, Bot, X } from "lucide-react";
+import { Send, Loader, User, Bot, X, Plus } from "lucide-react";
 import { useState, useRef, useEffect, createContext, useContext, useMemo } from "react";
 import { ScrollArea } from "../ui/scroll-area";
 import { useLanguage } from "@/context/language-context";
@@ -74,7 +74,7 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
 
   useEffect(() => {
     if (initialMessage) {
-      setInput(initialMessage);
+      handleSuggestionClick(initialMessage);
       setInitialMessage(""); // Clear after setting
     }
   }, [initialMessage, setInitialMessage]);
@@ -87,14 +87,12 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
       });
     }
   }, [messages]);
+  
+  const sendMessage = (messageText: string) => {
+    if (!messageText.trim() || loading) return;
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim() || loading) return;
-
-    const userMessage: Message = { role: "user", content: input };
+    const userMessage: Message = { role: "user", content: messageText };
     setMessages((prev) => [...prev, userMessage]);
-    setInput("");
     setLoading(true);
 
     // Simulate a delay for the bot's response
@@ -103,6 +101,16 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
         setMessages((prev) => [...prev, botMessage]);
         setLoading(false);
     }, 500);
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    sendMessage(input);
+    setInput("");
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    sendMessage(suggestion);
   };
 
   return (
@@ -130,34 +138,51 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
           <div className="flex-1 flex flex-col overflow-hidden">
             <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
               <div className="space-y-4 max-w-4xl mx-auto w-full">
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`flex items-start gap-3 ${
-                      message.role === "user" ? "justify-end" : ""
-                    }`}
-                  >
-                    {message.role === "model" && (
-                      <div className="p-2 bg-secondary rounded-full">
-                        <Bot className="w-6 h-6 text-primary" />
-                      </div>
-                    )}
-                    <div
-                      className={`max-w-[75%] rounded-lg p-3 ${
-                        message.role === "user"
-                          ? "bg-primary text-primary-foreground"
-                          : "bg-muted"
-                      }`}
-                    >
-                      <p className="text-sm">{message.content}</p>
+                {messages.length === 0 && !loading ? (
+                    <div className="flex flex-col items-center justify-center h-full text-center p-8">
+                        <div className="p-4 bg-secondary rounded-full mb-4">
+                            <Bot className="w-10 h-10 text-primary" />
+                        </div>
+                        <h2 className="text-2xl font-bold font-headline mb-2">{chatbotContent.welcomeTitle}</h2>
+                        <p className="text-muted-foreground mb-8">{chatbotContent.welcomeMessage}</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-md">
+                            {chatbotContent.suggestions.map((suggestion, index) => (
+                                <Button key={index} variant="outline" onClick={() => handleSuggestionClick(suggestion)}>
+                                    {suggestion}
+                                </Button>
+                            ))}
+                        </div>
                     </div>
-                      {message.role === "user" && (
-                      <div className="p-2 bg-secondary rounded-full">
-                        <User className="w-6 h-6 text-primary" />
-                      </div>
-                    )}
-                  </div>
-                ))}
+                ) : (
+                    messages.map((message, index) => (
+                    <div
+                        key={index}
+                        className={`flex items-start gap-3 ${
+                        message.role === "user" ? "justify-end" : ""
+                        }`}
+                    >
+                        {message.role === "model" && (
+                        <div className="p-2 bg-secondary rounded-full">
+                            <Bot className="w-6 h-6 text-primary" />
+                        </div>
+                        )}
+                        <div
+                        className={`max-w-[75%] rounded-lg p-3 ${
+                            message.role === "user"
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-muted"
+                        }`}
+                        >
+                        <p className="text-sm">{message.content}</p>
+                        </div>
+                        {message.role === "user" && (
+                        <div className="p-2 bg-secondary rounded-full">
+                            <User className="w-6 h-6 text-primary" />
+                        </div>
+                        )}
+                    </div>
+                    ))
+                )}
                 {loading && (
                   <div className="flex items-start gap-3">
                     <div className="p-2 bg-secondary rounded-full">
@@ -172,6 +197,10 @@ export function Chatbot({ initialMessage, setInitialMessage }: ChatbotProps) {
             </ScrollArea>
             <div className="p-4 border-t bg-background">
               <form onSubmit={handleSubmit} className="flex items-center gap-2 max-w-4xl mx-auto w-full">
+                <Button type="button" variant="ghost" size="icon">
+                  <Plus className="w-5 h-5" />
+                  <span className="sr-only">Upload Photo</span>
+                </Button>
                 <Input
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
