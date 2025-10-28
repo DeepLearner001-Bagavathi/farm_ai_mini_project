@@ -27,19 +27,19 @@
     {
       "id": "fact-1",
       "description": "A vibrant field of turmeric plants with lush green leaves.",
-      "imageUrl": "https://images.unsplash.com/photo-1626078239602-a16d3a48577a?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1626078239602-a16d3a48577a?q=80&w=1974&auto=format&fit=crop",
       "imageHint": "turmeric field"
     },
     {
       "id": "fact-2",
       "description": "A close-up shot of a drip irrigation system watering a plant.",
-      "imageUrl": "https://images.unsplash.com/photo-1629813299723-3a789649983b?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1629813299723-3a789649983b?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "drip irrigation"
     },
     {
       "id": "fact-3",
       "description": "A beautiful sunrise over a vast agricultural landscape in Tamil Nadu.",
-      "imageUrl": "https://images.unsplash.com/photo-1558236109-54f85cd962f0?q=80&w=600&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1558236109-54f85cd962f0?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "farm sunrise"
     }
   ]
